@@ -26,4 +26,9 @@ export default class OBJ extends cc.Component {
         this.node.position =cc.v3( this.node.parent.convertToNodeSpaceAR(pos));
 
     }
+    Life :number;
+    onEnable()
+    {
+        this.Life=0;
+    }
 }

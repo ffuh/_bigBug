@@ -7,6 +7,7 @@
 
 import OBJ from "./OBJ";
 import GM from "../GM";
+import Edge from "./Edge";
 
 
 
@@ -20,6 +21,14 @@ import GM from "../GM";
     
         @property
         ATT: number = 900;
+
+        @property
+        DeadStrick: number = 0.05;
+
+
+        @property(cc.Node)
+        Edge: cc.Node = null;
+
     
         // LIFE-CYCLE CALLBACKS:
     
@@ -40,7 +49,43 @@ import GM from "../GM";
 
             return this;
         }
-    
+
+        Dead():OO
+        {
+
+            let _ob=   cc.instantiate(this.Edge);
+            let _edge= _ob!=null?_ob.getComponent(Edge):null;
+
+            if(_edge!=null)
+            {
+                _edge.node.parent=cc.director.getScene();
+                _edge.Set(this.ATT).SetSpeed(this.Speed).SetWorldPosition(this.GetWorldPosition());
+                _edge.node.active=true;
+            }
+
+
+
+            if(this.DeadStrick<=0)
+                this._DoDead();
+            else
+                this.scheduleOnce( this._DoDead,this.DeadStrick);
+            return this;
+        }
+        private _DoDead()
+        {
+            this.node.destroy();
+
+            if(this._ONDead!=null)
+                this._ONDead();
+        }
+
+        _ONDead:Function;
+        WaitDead(on:Function):OO
+        {
+            this._ONDead=on;
+            return this;
+        }
+        
         update (dt) 
         {
     
@@ -54,28 +99,19 @@ import GM from "../GM";
 
             if(this.node.position.y<-1000)
             {
-                this.node.destroy();
+               this._DoDead();
             }
 
            // console.log("OO.Speed:" +this.Speed.mag());
         }
 
-        ATTo(wpos :cc.Vec2):number
+
+
+        onCollisionEnter(other:cc.Collider ,self:cc.Collider)
         {
-
-            // 入射速度
-            let vpp=this.Speed.mag();
-
-
-            //计算入射角度
-            let dir:cc.Vec2 = cc.v2( wpos.sub(this.GetWorldPosition()));
-            let radian = this.Speed.signAngle(dir);//获得带方向的夹角弧度值(参考方向顺时针为正值，逆时针为负值)
-            let degree =cc.misc.radiansToDegrees(radian);
-
-
-
-
-            return  Math.pow( Math.cos(radian),2)*this.ATT;
+            console.log("OO.onCollisionEnter:"+other.node.name+":"+self.node.name);
+            
+            this.Dead();
         }
     }   
 

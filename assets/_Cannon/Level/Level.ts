@@ -31,29 +31,9 @@ import Cannon from "../OBJ/Cannon";
 
 
         }
-        _OnObj(who:ClockObj)
+        _OnAddObj(who:ClockObj)
         {
             if(who==null)   return;
-            
-            who.WaitTrunOver((who)=>
-            {
-                console.log("ONAction:"+who.Name);
-                 this._CLOCK.Add(who,5);
-
-                if(who!=null && who.Name=="MY")
-                {
-                    this._CLOCK.Run();
-
-                }
-
-            }).WaitTurn((who:ClockObj)=>
-            {
-                if(who!=null && who.Name=="MY")
-                {
-                    this._CLOCK.Pause();
-
-                }
-            })  ;   
             
             if(this._CLOCK!=null )
                 this._CLOCK.Add(who,1);
@@ -63,9 +43,7 @@ import Cannon from "../OBJ/Cannon";
             if( this._MY !=null)
             {
                 this._MY.Name="MY";
-                this._OnObj(this._MY);
-
-
+                this._OnAddObj(this._MY);
             }
 
 
@@ -74,7 +52,7 @@ import Cannon from "../OBJ/Cannon";
 
             _hatches?.forEach((hhh)=>
             {
-                hhh.Live().WaitHatch(this._OnObj.bind(this));
+                hhh.Live().WaitHatch(this._OnAddObj.bind(this) );
             })
 
 

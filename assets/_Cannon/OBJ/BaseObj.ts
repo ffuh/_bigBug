@@ -42,6 +42,9 @@ export default class BaseObj extends OBJ
     @property(cc.Prefab)
     MOD_Tip: cc.Node ;
 
+    @property(cc.Prefab)
+    MOD_Info: cc.Node ;
+
     State: OBJState = OBJState.osNone;
     // LIFE-CYCLE CALLBACKS:
 
@@ -77,6 +80,43 @@ export default class BaseObj extends OBJ
         return _label;
 
     }
+
+    _InfoLable:cc.Label;
+    
+    ShowInfo(_info:string):cc.Label
+    {
+        if(this.MOD_Info==null)
+            return;
+
+        if(this._InfoLable==null)
+        {
+            let _new=    cc.instantiate(this.MOD_Info);
+
+            _new.parent= this.node;
+    
+            _new.position=cc.Vec3.UP.mul(200);
+            
+            this._InfoLable =_new.getComponent(cc.Label);            
+        }
+
+        if(this._InfoLable!=null)
+        {
+            this._InfoLable.string =_info;  
+            this._InfoLable.node.active=true;
+        }
+      
+        return this._InfoLable;
+
+
+    }
+    CloseInfo()
+    {
+        if(this._InfoLable!=null)
+        {
+            this._InfoLable.node.active=false;
+        } 
+    }
+
 }
 
 

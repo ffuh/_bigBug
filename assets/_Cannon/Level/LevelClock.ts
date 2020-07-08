@@ -39,15 +39,16 @@ export default class LevelClock extends cc.Component {
         if(this._ObjArr==null)
             this._ObjArr=new Array<ActionObj>();
 
-
-        this._ObjArr.forEach(e => 
+        for(let i=0;i<this._ObjArr.length;i++)
         {
-            if(e.Obj.Name==name)
+            if(this._ObjArr[i]!=null && this._ObjArr[i].Obj==obj)
             {
-                e.Waiting+=waiting;
+                this._ObjArr[i].Waiting+=waiting;
                 return this;
             }
-        })
+
+        }
+
 
         this._ObjArr.push(new ActionObj(obj,waiting));
 
@@ -84,13 +85,24 @@ export default class LevelClock extends cc.Component {
         if(this._ObjArr==null || this._ObjArr.length<1)
             return;
 
-        this._ObjArr.forEach(e => 
+
+
+        for(let i=0;i<this._ObjArr.length;i++)
         {
-           
-            if(e.Update(dt).Waiting<=0)
+            let who =this._ObjArr[i];
+            if(who!=null && who.Obj!=null && who.Update(dt).Waiting<=0) 
             {
-                this._OneTurn(e.Obj);
+
+                who.Obj.DoTurn().WaitTrunOver( (w=>
+                    {
+                        this.Run();   
+                        this.Add(w,w.NowWaitime);
+                        
+                    }).bind(this));
+                this.Pause();    
+                return;    
             }
-        });
+
+        }
     }
 }

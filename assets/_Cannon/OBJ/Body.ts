@@ -8,6 +8,7 @@
 import OO from "./OO";
 import OBJ from "./OBJ";
 import BaseObj from "./BaseObj";
+import Edge from "./Edge";
 
 const {ccclass, property} = cc._decorator;
 
@@ -38,11 +39,12 @@ export default class Body extends OBJ {
     onCollisionEnter(other:cc.Collider ,self:cc.Collider)
     {
         console.log("onCollisionEnter:"+other.node.name+":"+self.node.name);
-        let oo:OO= other.node.getComponent(OO);
-        if(oo!=null)
+        
+        let _edge= other.node.getComponent(Edge);
+        if(_edge!=null)
         {
 
-            let att = oo.ATTo(this.GetWorldPosition());
+            let att = _edge.Attack(this.GetWorldPosition());
 
             //威力
             //let power= 

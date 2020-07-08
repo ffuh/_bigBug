@@ -69,7 +69,11 @@ export default class Cannon extends ClockObj {
             let _speed = new cc.Vec2(Math.cos(this.Yawing*3.14/180),Math.sin(this.Yawing*3.14/180)).mul(this.Powering*this.PowerBase);
 
 
-            ooo.getComponent(OO)?.Set(_speed);                 
+            ooo.getComponent(OO)?.Set(_speed).WaitDead(()=>
+            {
+                this.TurnOver();
+
+            });                 
         }
     }
 

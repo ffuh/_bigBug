@@ -1,7 +1,7 @@
 {
-  "title": "PlaneWars",
+  "title": "BigBug",
   "packageName": "org.cocos2d.demo",
-  "startScene": "4b9e1e6e-cc8f-44ef-b99d-0cdd66827b44",
+  "startScene": "a96953aa-ad9e-4bf9-b186-ba164f4cc3e6",
   "excludeScenes": [],
   "includeSDKBox": false,
   "orientation": {
@@ -10,7 +10,7 @@
     "portrait": false,
     "upsideDown": false
   },
-  "webOrientation": "portrait",
+  "webOrientation": "landscape",
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
   "mergeStartScene": false,

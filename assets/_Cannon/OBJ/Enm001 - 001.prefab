@@ -59,8 +59,8 @@
         0,
         0,
         1,
-        1,
-        1,
+        0.5,
+        0.5,
         1
       ]
     },
@@ -214,7 +214,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "4dab2020-af9d-4f3e-8e94-ea1c3b960560"
+      "__uuid__": "692af83d-a644-41f2-8abe-af822eb28c4e"
     },
     "fileId": "cePxWrgPxDFqvghX1Ce50f",
     "sync": false
@@ -232,15 +232,15 @@
     "Desc": "Desc",
     "HP": 100,
     "Denf": 0,
-    "Speed": 20,
+    "Speed": 50,
     "MOD_Tip": {
       "__uuid__": "51ffb10d-4f78-42e8-8715-3c14754e812a"
     },
     "MOD_Info": {
       "__uuid__": "6f69373a-ffbd-44b9-9c73-777239915ff5"
     },
-    "TurnLife": 1,
-    "Waitime": 10,
+    "TurnLife": 2,
+    "Waitime": 7,
     "MOD_TurnTip": {
       "__uuid__": "e8f95ef1-5ccb-4d0a-9493-a3e8149e0f7c"
     },
@@ -252,7 +252,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "4dab2020-af9d-4f3e-8e94-ea1c3b960560"
+      "__uuid__": "692af83d-a644-41f2-8abe-af822eb28c4e"
     },
     "fileId": "757+GsDLBFDqdrTKMm48Mv",
     "sync": false

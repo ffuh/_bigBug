@@ -15,12 +15,21 @@ export default class ClockObj extends BaseObj
     @property
     TurnLife:number=2;
 
+    @property
+    Waitime:number=3;
+
+
+    @property(cc.Prefab)
+    MOD_TurnTip: cc.Node ;
+
+
+    NowWaitime=0;
     TurnLifeLeft=0;
     DoTurn():ClockObj
     {
         this.TurnLifeLeft=this.TurnLife;
 
-
+        this.ShowTurnTip();
 
         this.OnTurn();
 
@@ -30,6 +39,10 @@ export default class ClockObj extends BaseObj
     }
     TurnOver():ClockObj
     {
+        this.TurnLifeLeft=0;
+        this.NowWaitime=this.Waitime;
+        this.CloseInfo();
+        this.CloseTurnTip();
         this.OnTurnOver();
         if(this._ONTurnOver!=null)
             this._ONTurnOver(this);
@@ -60,7 +73,29 @@ export default class ClockObj extends BaseObj
         this._ONTurnOver=on;
         return this;
     }
+    _TurnTip:cc.Node;
+    ShowTurnTip()
+    {
+        if(this._TurnTip==null)
+        {
+            this._TurnTip=cc.instantiate(this.MOD_TurnTip);
+            this._TurnTip.parent=this.node;
+            this._TurnTip.position=cc.v3(0,200,0);
+            //MOD_TurnTip
+        }
+        if(this._TurnTip!=null)
+        {
+            this._TurnTip.active=true;
+        }
 
+    }
+    CloseTurnTip()
+    {
+        if(this._TurnTip!=null)
+        {
+            this._TurnTip.active=false;
+        } 
+    }
 
     update(dt)
     {
@@ -69,8 +104,17 @@ export default class ClockObj extends BaseObj
         if(this.TurnLifeLeft>0)
         {
             this.TurnLifeLeft-=dt;
+
+            this.ShowInfo( Math.ceil(this.TurnLifeLeft).toString()  ); 
+
             if(this.TurnLifeLeft<=0)
+            {
                 this.TurnOver();
+
+                return;
+            }
+               
+              
         }
             
     }
