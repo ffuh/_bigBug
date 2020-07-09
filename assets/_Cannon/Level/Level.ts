@@ -9,6 +9,8 @@ import Hatcher from "./Hatcher";
 import LevelClock from "./LevelClock";
 import ClockObj from "../OBJ/ClockObj";
 import Cannon from "../OBJ/Cannon";
+import LevelWind from "./LevelWind";
+import GM from "../GM";
 
 
     const {ccclass, property} = cc._decorator;
@@ -16,16 +18,30 @@ import Cannon from "../OBJ/Cannon";
     @ccclass
     export default class Level extends cc.Component {
     
-
+        @property
         ID:number=1;
+
+        @property
         Life:number=180;
+        @property
+        WindForce:number =100;
+        @property
+        WindStable:number =100;
 
         _CLOCK:LevelClock;
         _MY :Cannon;
+        _Wind :LevelWind;
         start () 
         {
             this._CLOCK =this.getComponent(LevelClock);
+            this._Wind =this.getComponent(LevelWind);
+
             this._MY =this.getComponentInChildren(Cannon);
+            this._Wind =this.getComponent(LevelWind);
+
+
+            GM.LEVEL=this;
+
 
             this.scheduleOnce(this.Begin,2);
 
@@ -63,7 +79,10 @@ import Cannon from "../OBJ/Cannon";
                     who.DoTurn();
                 }).Run();
             }
-
+            if(this._Wind!=null)
+            {
+                this._Wind.Set(this.WindForce,this.WindStable).Reset();
+            }
 
         }
 
@@ -71,7 +90,7 @@ import Cannon from "../OBJ/Cannon";
         {
 
         }
-
+        Winding():number { return this._Wind==null?0:this._Wind.Now;}
     }
 
 

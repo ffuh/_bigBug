@@ -25,6 +25,9 @@ import Edge from "./Edge";
         @property
         DeadStrick: number = 0.05;
 
+        @property
+        Stable:number =100;
+
 
         @property(cc.Node)
         Edge: cc.Node = null;
@@ -90,6 +93,12 @@ import Edge from "./Edge";
         {
     
             this.Speed=this.Speed.add( cc.v2(0,GM.G*dt));
+
+            this.Speed=this.Speed.add( GM.WA(this.Stable,0).mul(dt));
+
+
+
+
 
             let _dpos =  this.Speed.mul(dt);
 
