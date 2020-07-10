@@ -17,8 +17,11 @@ export default class OBJ extends cc.Component
 {
     static OBJ_UDD=14151;
 
-    @property
+
     UDD:number;
+
+    @property
+    AutoLive:boolean=true;
 
     State: OBJState = OBJState.osNone;
 
@@ -45,7 +48,7 @@ export default class OBJ extends cc.Component
     Lifing :number;
     onEnable()
     {
-       this.Live();
+       if(this.AutoLive) this.Live();
     }
     Live():OBJ
     {

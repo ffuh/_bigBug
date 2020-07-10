@@ -445,6 +445,7 @@
     "label": null,
     "ATT": 900,
     "DeadStrick": 0,
+    "Stable": 200,
     "Edge": {
       "__id__": 5
     },
