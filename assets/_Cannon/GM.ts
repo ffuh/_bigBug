@@ -22,7 +22,6 @@ export default class GM extends cc.Component
 
     static  LEVEL: Level = null;
     static  CANNON: Cannon = null;
-    static  LEVEL:Level=null;
     static G =500;
     static W =0;
     static  WA_MAX =1000;
