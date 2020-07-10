@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import Cannon from "./OBJ/Cannon";
+import Level from "./Level/Level";
 
 const {ccclass, property} = cc._decorator;
 
@@ -21,6 +22,7 @@ export default class GM extends cc.Component
 
 
     static  CANNON: Cannon = null;
+    static  LEVEL:Level=null;
     static G =500;
 
 

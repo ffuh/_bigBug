@@ -12,18 +12,11 @@ import OBJ from "./OBJ";
 
 
 const {ccclass, property} = cc._decorator;
-export enum  OBJState
-{
-    osNone=0,
-    osLiving=1,
-    osDead=2,
-}
+
 @ccclass
 export default class BaseObj extends OBJ 
 {
 
-    @property
-    ID: number=1;
     @property
     Name: string = 'Name';
     @property
@@ -45,17 +38,11 @@ export default class BaseObj extends OBJ
     @property(cc.Prefab)
     MOD_Info: cc.Node ;
 
-    State: OBJState = OBJState.osNone;
+    NowHP:number=0;
+
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
-
-    start () 
-    {
-
-    }
-
-    // update (dt) {}
+    NameFull():string{return this.NameUDD()+"_HP("+this.NowHP.toFixed(0).toString()+")"}
 
     ShowTip(_tip:string):cc.Label
     {
@@ -116,7 +103,26 @@ export default class BaseObj extends OBJ
             this._InfoLable.node.active=false;
         } 
     }
+    Hurt(dHP:number):BaseObj
+    {
+        this.NowHP-=dHP;
 
+        if(this.NowHP<=0)
+        {
+            this.NowHP=0;
+            this.Dead();
+        }
+        var _log:string="[OBJ Hurt@" +this.NameFull()+"]: ";
+
+        console.log( _log+dHP.toFixed(0).toString()   )
+        return this;
+    }
+
+    OnLive()
+    {
+        super.OnLive();
+        this.NowHP=this.HP;
+    }
 }
 
 

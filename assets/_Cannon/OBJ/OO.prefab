@@ -79,8 +79,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 6,
+    "groupIndex": 6,
     "_id": ""
   },
   {
@@ -143,8 +143,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 6,
+    "groupIndex": 6,
     "_id": ""
   },
   {
@@ -260,8 +260,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 5,
+    "groupIndex": 5,
     "_id": ""
   },
   {
@@ -324,8 +324,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 5,
+    "groupIndex": 5,
     "_id": ""
   },
   {
@@ -396,6 +396,7 @@
       "__id__": 5
     },
     "_enabled": true,
+    "DDTime": 0.1,
     "_id": ""
   },
   {
@@ -446,6 +447,9 @@
     "DeadStrick": 0,
     "Edge": {
       "__id__": 5
+    },
+    "Eff_D": {
+      "__uuid__": "c3c9bece-ca6b-4085-9496-0d9051d1bbbe"
     },
     "_id": ""
   },

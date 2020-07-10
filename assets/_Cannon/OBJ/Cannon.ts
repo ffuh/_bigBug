@@ -96,10 +96,10 @@ export default class Cannon extends ClockObj {
         switch(event.keyCode)
         {            
             case cc.macro.KEY.up:         
-                   this.Yaw(1)  
+                   this.YawAdd(1)  
                       break;   
             case cc.macro.KEY.down:         
-                this.Yaw(-1)  
+                this.YawAdd(-1)  
                     break;   
             case cc.macro.KEY.space:
                 if(!this._Powering) 
@@ -107,10 +107,17 @@ export default class Cannon extends ClockObj {
                  break;    
         }    
     }  
-    
-    Yaw(_yaw:number)
+    SetYaw(_yaw:number)
     {
-        this.Yawing+=_yaw;
+        this.Yawing=_yaw;
+        if(this.Yawing>this.ShootYawMax)
+            this.Yawing=this.ShootYawMax;
+        if(this.Yawing<this.ShootYawMin)
+            this.Yawing=this.ShootYawMin;
+    }
+    YawAdd(_dd:number)
+    {
+        this.Yawing+=_dd;
         if(this.Yawing>this.ShootYawMax)
             this.Yawing=this.ShootYawMax;
         if(this.Yawing<this.ShootYawMin)

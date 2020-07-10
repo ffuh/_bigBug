@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "45f1d73c-f008-4135-89d8-b82f7bcdfecb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 2048,
+  "platformSettings": {},
+  "subMetas": {
+    "MoodySunrise02_RT": {
+      "ver": "1.0.4",
+      "uuid": "78bbdada-7484-4295-b5aa-0136dea066f5",
+      "rawTextureUuid": "45f1d73c-f008-4135-89d8-b82f7bcdfecb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2048,
+      "height": 2048,
+      "rawWidth": 2048,
+      "rawHeight": 2048,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

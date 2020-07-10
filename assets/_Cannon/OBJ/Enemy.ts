@@ -6,8 +6,8 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import Cannon from "./Cannon";
-import BaseObj, { OBJState } from "./BaseObj";
 import ClockObj from "./ClockObj";
+import { OBJState } from "./OBJ";
 
 
     const {ccclass, property} = cc._decorator;
@@ -20,16 +20,7 @@ import ClockObj from "./ClockObj";
     
         // onLoad () {}
     
-    
-        start () {
-            this.Live();
-        }
-        
-        Live():Enemy
-        {
-            this.State= OBJState.osLiving;
-            return this;
-        }
+
 
         update (dt) 
         {

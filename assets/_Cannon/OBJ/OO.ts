@@ -8,6 +8,7 @@
 import OBJ from "./OBJ";
 import GM from "../GM";
 import Edge from "./Edge";
+import CSBase from "../../__Lib/CS/CSBase";
 
 
 
@@ -29,6 +30,8 @@ import Edge from "./Edge";
         @property(cc.Node)
         Edge: cc.Node = null;
 
+        @property(cc.Prefab)
+        Eff_D: cc.Node = null;
     
         // LIFE-CYCLE CALLBACKS:
     
@@ -50,9 +53,9 @@ import Edge from "./Edge";
             return this;
         }
 
-        Dead():OO
+        OnDead()
         {
-
+            super.OnDead();
             let _ob=   cc.instantiate(this.Edge);
             let _edge= _ob!=null?_ob.getComponent(Edge):null;
 
@@ -64,20 +67,20 @@ import Edge from "./Edge";
             }
 
 
+            if(this.Eff_D!=null)
+            {
+                var eff=cc.instantiate(this.Eff_D);
+                eff.setParent(cc.director.getScene());
 
-            if(this.DeadStrick<=0)
-                this._DoDead();
-            else
-                this.scheduleOnce( this._DoDead,this.DeadStrick);
-            return this;
-        }
-        private _DoDead()
-        {
-            this.node.destroy();
+                eff.position=cc.v3( this.GetWorldPosition());
+            }
+
 
             if(this._ONDead!=null)
                 this._ONDead();
+            return this;
         }
+
 
         _ONDead:Function;
         WaitDead(on:Function):OO

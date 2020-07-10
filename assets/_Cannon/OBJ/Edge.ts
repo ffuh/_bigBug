@@ -34,14 +34,13 @@ export default class Edge extends OBJ
 
     update(dt)
     {
-        this.Life+=dt;
+        super.update(dt);
+
         if(this.DDTime>0)
         {
-            let pp = this.Life/this.DDTime;
+            let pp = this.Lifing/this.DDTime;
             this.ATT=this.ATTMax*(1- pp/(1+pp));
-        }
-       
-       
+        }             
     }
 
     Attack(wpos :cc.Vec2):number
@@ -50,7 +49,7 @@ export default class Edge extends OBJ
         // 入射速度
         let vpp=this.Speed.mag();
 
-
+     
         //计算入射角度
         let dir:cc.Vec2 = cc.v2( wpos.sub(this.GetWorldPosition()));
         let radian = this.Speed.signAngle(dir);//获得带方向的夹角弧度值(参考方向顺时针为正值，逆时针为负值)

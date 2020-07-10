@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "6786e853-5a57-47a5-984c-70b1dfa26f5f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 2048,
+  "platformSettings": {},
+  "subMetas": {
+    "PinkSunset01_BK": {
+      "ver": "1.0.4",
+      "uuid": "b00e4895-04e4-49bd-9b11-650a526457ac",
+      "rawTextureUuid": "6786e853-5a57-47a5-984c-70b1dfa26f5f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2048,
+      "height": 2048,
+      "rawWidth": 2048,
+      "rawHeight": 2048,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

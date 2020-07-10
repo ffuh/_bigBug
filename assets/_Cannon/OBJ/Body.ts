@@ -9,6 +9,7 @@ import OO from "./OO";
 import OBJ from "./OBJ";
 import BaseObj from "./BaseObj";
 import Edge from "./Edge";
+import Cannon from "./Cannon";
 
 const {ccclass, property} = cc._decorator;
 
@@ -23,13 +24,11 @@ export default class Body extends OBJ {
 
     // LIFE-CYCLE CALLBACKS:
 
-    Owner:BaseObj;
+    _Owner:BaseObj;
      onLoad () 
-     {
-        this.Owner=this.node.parent.getComponent(BaseObj);
-
-
-     }
+    {
+        this._Owner=this.node.parent.getComponent(BaseObj);
+    }
 
 
     start ()
@@ -46,11 +45,13 @@ export default class Body extends OBJ {
 
             let att = _edge.Attack(this.GetWorldPosition());
 
+            if(this._Owner!=null) 
+                this._Owner.Hurt(att);
             //威力
             //let power= 
             console.log("att：" +Math.ceil(att));
 
-            let tip= this.Owner.ShowTip( Math.ceil(att).toString());
+            let tip= this._Owner.ShowTip( Math.ceil(att).toString());
 
             if(tip!=null)
             tip.node.color=cc.Color.RED;

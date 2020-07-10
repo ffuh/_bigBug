@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "f55bb1ea-0323-4da7-b0d9-dfa00408b0d3",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 2048,
+  "platformSettings": {},
+  "subMetas": {
+    "CloudyCrown_Midnight_Front": {
+      "ver": "1.0.4",
+      "uuid": "ecd4195c-24af-4be8-8203-00ce3c96e7f9",
+      "rawTextureUuid": "f55bb1ea-0323-4da7-b0d9-dfa00408b0d3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2048,
+      "height": 2048,
+      "rawWidth": 2048,
+      "rawHeight": 2048,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

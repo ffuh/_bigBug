@@ -143,8 +143,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 4,
+    "groupIndex": 4,
     "_id": ""
   },
   {
@@ -230,7 +230,7 @@
     "ID": 1,
     "Name": "Name",
     "Desc": "Desc",
-    "HP": 100,
+    "HP": 900,
     "Denf": 0,
     "Speed": 50,
     "MOD_Tip": {

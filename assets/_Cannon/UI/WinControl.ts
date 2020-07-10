@@ -18,8 +18,8 @@ export default class WinControl extends cc.Component {
     @property(cc.Label)
     PowerNum: cc.Label = null;
 
-    @property(cc.ProgressBar)
-    Powering: cc.ProgressBar = null;
+    @property(cc.Sprite)
+    Powering: cc.Sprite = null;
 
     @property
     text: string = 'hello';
@@ -46,7 +46,7 @@ export default class WinControl extends cc.Component {
         if(this.Powering!=null && GM.CANNON!=null)
         {
             
-            this.Powering.progress= GM.CANNON.Powering/100;
+            this.Powering.fillRange= GM.CANNON.Powering/100;
         }
     }
 }

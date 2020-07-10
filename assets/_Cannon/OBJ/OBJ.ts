@@ -6,9 +6,25 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const {ccclass, property} = cc._decorator;
-
+export enum  OBJState
+{
+    osNone=0,
+    osLiving=1,
+    osDead=2,
+}
 @ccclass
-export default class OBJ extends cc.Component {
+export default class OBJ extends cc.Component 
+{
+    static OBJ_UDD=14151;
+
+    @property
+    UDD:number;
+
+    State: OBJState = OBJState.osNone;
+
+    NameUDD():string{return  this.node.name+"["+this.UDD.toString()+"]"; }
+
+
 
     GetWorldPosition():cc.Vec2
     {   
@@ -20,15 +36,55 @@ export default class OBJ extends cc.Component {
     }
 
     
-    SetWorldPosition(pos:cc.Vec2)
+    SetWorldPosition(pos:cc.Vec2):OBJ
     {
 
         this.node.position =cc.v3( this.node.parent.convertToNodeSpaceAR(pos));
-
+        return this;
     }
-    Life :number;
+    Lifing :number;
     onEnable()
     {
-        this.Life=0;
+       this.Live();
+    }
+    Live():OBJ
+    {
+        this.UDD=OBJ.OBJ_UDD++;
+
+
+        this.Lifing=0;
+        this.State= OBJState.osLiving;
+
+
+
+
+        this.OnLive();
+
+        return this;
+    }
+    OnLive()
+    {
+
+    }
+    Dead()
+    {
+        this.State= OBJState.osDead;
+        this.scheduleOnce(this._DoDead,0.02);
+        this.OnDead();
+        return this;
+    }
+
+    OnDead()
+    {
+
+    }
+    _DoDead()
+    {
+        this.node.destroy();
+    }
+    update(dt)
+    {
+        if(this.State!=OBJState.osLiving)   return;
+        this.Lifing+=dt;
     }
 }

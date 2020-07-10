@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "a122eb2b-c646-4770-9678-eec8f2b8dc8f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 2048,
+  "platformSettings": {},
+  "subMetas": {
+    "StormySky01_FR": {
+      "ver": "1.0.4",
+      "uuid": "96ea017f-f826-4fbb-ba75-ac73c5b62e85",
+      "rawTextureUuid": "a122eb2b-c646-4770-9678-eec8f2b8dc8f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2048,
+      "height": 2048,
+      "rawWidth": 2048,
+      "rawHeight": 2048,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

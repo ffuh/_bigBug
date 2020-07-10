@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "f4c26d2c-c578-4310-8dcb-bab2e84a8fc7",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 2048,
+  "platformSettings": {},
+  "subMetas": {
+    "BrightMorning01_LF": {
+      "ver": "1.0.4",
+      "uuid": "7c1d0a48-a49d-4489-8002-666c4e5439f8",
+      "rawTextureUuid": "f4c26d2c-c578-4310-8dcb-bab2e84a8fc7",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2048,
+      "height": 2048,
+      "rawWidth": 2048,
+      "rawHeight": 2048,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

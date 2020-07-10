@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "fcc413e2-29bb-4eb3-81c5-dc45dc8c1974",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 2048,
+  "platformSettings": {},
+  "subMetas": {
+    "BlueSky02_UP": {
+      "ver": "1.0.4",
+      "uuid": "59cb8358-fc20-45f4-8852-e8c5089a2ef0",
+      "rawTextureUuid": "fcc413e2-29bb-4eb3-81c5-dc45dc8c1974",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2048,
+      "height": 2048,
+      "rawWidth": 2048,
+      "rawHeight": 2048,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
