@@ -4597,6 +4597,16 @@
     "_id": "69eW8pgYxKJJOgu8+oYTGv"
   },
   {
+    "__type__": "663294uWbZDqa8kRB5DgRVT",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 34
+    },
+    "_enabled": true,
+    "_id": "10JghqxKBIhpEaNco7ewdu"
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,

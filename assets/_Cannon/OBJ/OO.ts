@@ -26,6 +26,9 @@ import CSBase from "../../__Lib/CS/CSBase";
         @property
         DeadStrick: number = 0.05;
 
+        @property
+        Stable:number =100;
+
 
         @property(cc.Node)
         Edge: cc.Node = null;
@@ -93,6 +96,12 @@ import CSBase from "../../__Lib/CS/CSBase";
         {
     
             this.Speed=this.Speed.add( cc.v2(0,GM.G*dt));
+
+            this.Speed=this.Speed.add( GM.WA(this.Stable,0).mul(dt));
+
+
+
+
 
             let _dpos =  this.Speed.mul(dt);
 

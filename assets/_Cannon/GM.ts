@@ -20,11 +20,13 @@ export default class GM extends cc.Component
     @property
     text: string = 'hello';
 
-
+    static  LEVEL: Level = null;
     static  CANNON: Cannon = null;
     static  LEVEL:Level=null;
     static G =500;
-
+    static W =0;
+    static  WA_MAX =1000;
+    
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -39,6 +41,13 @@ export default class GM extends cc.Component
 
     start () {
 
+    }
+
+    static WA(stable:number,hy:number):cc.Vec2
+    {
+        var xx=  GM.WA_MAX*(GM.W/10)*(1- stable/(100+stable));
+
+        return cc.v2(xx,0);
     }
 
     // update (dt) {}

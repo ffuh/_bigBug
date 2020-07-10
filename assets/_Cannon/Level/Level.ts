@@ -11,6 +11,8 @@ import ClockObj from "../OBJ/ClockObj";
 import Cannon from "../OBJ/Cannon";
 import GM from "../GM";
 import Enemy from "../OBJ/Enemy";
+import LevelWind from "./LevelWind";
+
 
 
     const {ccclass, property} = cc._decorator;
@@ -20,8 +22,13 @@ import Enemy from "../OBJ/Enemy";
     
         @property
         ID:number=1;
+
         @property
         Life:number=180;
+        @property
+        WindForce:number =100;
+        @property
+        WindStable:number =100;
 
         _CLOCK:LevelClock;
         _MY :Cannon;
@@ -29,12 +36,20 @@ import Enemy from "../OBJ/Enemy";
         _Lifing=0;
         _Runing=false;
         _Enmes:Array<Enemy>;
+        _Wind :LevelWind;
         start () 
         {
             GM.LEVEL = this;
             
             this._CLOCK =this.getComponent(LevelClock);
+            this._Wind =this.getComponent(LevelWind);
+
             this._MY =this.getComponentInChildren(Cannon);
+            this._Wind =this.getComponent(LevelWind);
+
+
+            GM.LEVEL=this;
+
 
             this.scheduleOnce(this.Begin,2);
         }
@@ -78,6 +93,11 @@ import Enemy from "../OBJ/Enemy";
 
             this._Lifing=0;
             this._Runing=true;
+            if(this._Wind!=null)
+            {
+                this._Wind.Set(this.WindForce,this.WindStable).Reset();
+            }
+
         }
 
         End()
@@ -102,6 +122,7 @@ import Enemy from "../OBJ/Enemy";
 
 
         }
+        Winding():number { return this._Wind==null?0:this._Wind.Now;}
     }
 
 
