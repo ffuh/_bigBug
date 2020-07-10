@@ -240,8 +240,8 @@
     "MOD_Info": {
       "__uuid__": "6f69373a-ffbd-44b9-9c73-777239915ff5"
     },
-    "TurnLife": 1,
-    "Waitime": 10,
+    "TurnLife": 2,
+    "Waitime": 2,
     "MOD_TurnTip": {
       "__uuid__": "e8f95ef1-5ccb-4d0a-9493-a3e8149e0f7c"
     },
