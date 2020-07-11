@@ -8,6 +8,8 @@
 import Cannon from "./Cannon";
 import ClockObj from "./ClockObj";
 import { LiveState } from "../../__Lib/Base/LiveObj";
+import GM from "../GM";
+import Unit from "./Unit";
 
 
 
@@ -15,24 +17,48 @@ import { LiveState } from "../../__Lib/Base/LiveObj";
     const {ccclass, property} = cc._decorator;
 
     @ccclass
-    export default class Enemy extends ClockObj {
+    export default class Enemy extends Unit {
     
-        
+        @property
+        Eatablity=1;
+
         // LIFE-CYCLE CALLBACKS:
     
         // onLoad () {}
-    
+        _InEating=false;
 
+        private __last=0;
+        private __passed=0;
+        _Eating(dt)
+        {
+            this._InEating=true;
+            this.__passed+=dt;
+            if(this.__passed<2)
+            {
+                return;
+            }
+
+            this.__passed-=2;
+       
+            GM.HOME.BeEated(this.Eatablity);
+        }
+
+        _HomeDist()
+        {
+            var _dist=  cc.Vec2.distance(this.GetWorldPosition(),GM.HOME.GetWorldPosition());
+            return  _dist;
+        }
 
         update (dt) 
         {
-            super.update(dt);
+            
 
-            if(this.State==LiveState.osLiving && this.TurnLifeLeft>0)
+            if(this._HomeDist()<=60)
             {
-                this.node.position= this.node.position.add(cc.v3(-1*this.Speed*dt,0,0));
+                this._Eating(dt);
+                return;
             }
-
+            super.update(dt);
         }
     }
 

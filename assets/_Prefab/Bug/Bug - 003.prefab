@@ -135,8 +135,8 @@
         0,
         0,
         1,
-        0.05,
-        0.05,
+        0.07,
+        0.07,
         1
       ]
     },
@@ -231,7 +231,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "1f95335d-3359-4a8b-ba0f-89fece1206d1"
+      "__uuid__": "08bcda47-0940-4d5e-9b76-3a919d90e7eb"
     },
     "fileId": "aeTtADVp9EIbIRwE7gRV5R",
     "sync": false
@@ -374,7 +374,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "1f95335d-3359-4a8b-ba0f-89fece1206d1"
+      "__uuid__": "08bcda47-0940-4d5e-9b76-3a919d90e7eb"
     },
     "fileId": "b3tOvpGMVEN7w0dqAwB0l5",
     "sync": false
@@ -463,7 +463,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "1f95335d-3359-4a8b-ba0f-89fece1206d1"
+      "__uuid__": "08bcda47-0940-4d5e-9b76-3a919d90e7eb"
     },
     "fileId": "c1GBzwdfNHtq+XlAwoh/xL",
     "sync": false
@@ -494,6 +494,7 @@
     "MOD_TurnTip": {
       "__uuid__": "e8f95ef1-5ccb-4d0a-9493-a3e8149e0f7c"
     },
+    "Eatablity": 1,
     "_id": ""
   },
   {
@@ -502,7 +503,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "1f95335d-3359-4a8b-ba0f-89fece1206d1"
+      "__uuid__": "08bcda47-0940-4d5e-9b76-3a919d90e7eb"
     },
     "fileId": "810tvXEOpIUanaaOVxnMA1",
     "sync": false

@@ -49,7 +49,7 @@ import WinSuccess from "../UI/WinSuccess";
         {
             GM.LEVEL = this;
             
-            this._CLOCK =this.getComponent(LevelClock);
+            //this._CLOCK =this.getComponent(LevelClock);
             this._Wind =this.getComponent(LevelWind);
 
             this._MY =this.getComponentInChildren(Cannon);
@@ -62,8 +62,8 @@ import WinSuccess from "../UI/WinSuccess";
         {
             if(who==null)   return;
             
-            if(this._CLOCK!=null )
-                this._CLOCK.Add(who,1);
+            // if(this._CLOCK!=null )
+            //     this._CLOCK.Add(who,1);
             let _enm:Enemy = who.getComponent(Enemy);
   
             if(_enm!=null)
@@ -109,13 +109,13 @@ import WinSuccess from "../UI/WinSuccess";
             })
 
 
-            if(this._CLOCK!=null)
-            {
-                this._CLOCK.Wait((who:ClockObj)=>
-                {
-                    who.DoTurn();
-                }).Run();
-            }
+            // if(this._CLOCK!=null)
+            // {
+            //     this._CLOCK.Wait((who:ClockObj)=>
+            //     {
+            //         who.DoTurn();
+            //     }).Run();
+            // }
 
             this._Lifing=0;
             this._Runing=true;

@@ -30,6 +30,11 @@ export default class BaseObj extends LiveObj
     @property
     Speed: number = 50;
 
+    @property(cc.Label)
+    uiName: cc.Label = null;
+    @property(cc.Sprite)
+    uiHP: cc.Sprite = null;
+
     @property(cc.Prefab)
     MOD_Tip: cc.Node ;
 
@@ -41,7 +46,7 @@ export default class BaseObj extends LiveObj
     // LIFE-CYCLE CALLBACKS:
 
     NameFull():string{return this.NameUDD()+"_HP("+this.NowHP.toFixed(0).toString()+")"}
-
+    HPrecent():number{return this.HP<=0?0: this.NowHP/this.HP; }
     ShowTip(_tip:string):cc.Label
     {
         if(this.MOD_Tip==null)
@@ -120,6 +125,15 @@ export default class BaseObj extends LiveObj
     {
         super.OnLive();
         this.NowHP=this.HP;
+        if(this.uiName!=null)
+            this.uiName.string=this.Name;
+    }
+    update(dt)
+    {
+        super.update(dt);
+
+        if(this.uiHP!=null)
+            this.uiHP.fillRange=this.HPrecent();
     }
 }
 

@@ -13,6 +13,8 @@ import { EX } from "../__Lib/EX";
 import WinLevel from "./UI/WinLevel";
 import WinControl from "./UI/WinControl";
 import UILevelWind from "./Level/UILevelWind";
+import Home from "./OBJ/Home";
+import Win from "../__Lib/Base/Win";
 
 const {ccclass, property} = cc._decorator;
 
@@ -37,10 +39,11 @@ export default class GM extends cc.Component
     @property (cc.Prefab)
     Mod_WinSuccess:WinSuccess=null;
     @property (cc.Prefab)
-    Mod_WinFaild:WinSuccess=null;
+    Mod_WinFaild:Win=null;
 
     static  LEVEL: Level = null;
     static  CANNON: Cannon = null;
+    static  HOME   :Home=null;
     static G =500;
     static W =0;
     static  WA_MAX =1000;
@@ -66,17 +69,16 @@ export default class GM extends cc.Component
     start () 
     {
       
-        this.scheduleOnce(this._Init,0.3);
+        this.schedule(this._Init,0.3);
     }
 
     _Init()
     {
-        if(GM.LEVEL==null || GM.CANNON==null)   
+        if(GM.LEVEL==null || GM.CANNON==null|| GM.HOME==null)   
         {
-            this.scheduleOnce(this._Init,0.3);
             return;
         }
-
+        this.unscheduleAllCallbacks();
 
         UI.CreateWindow<WinLevel>(this.Mod_WinLevel);
         UI.CreateWindow<WinControl>(this.Mod_WinControl);
@@ -87,6 +89,10 @@ export default class GM extends cc.Component
                 this._DoSuccess(result);
             });
         
+        GM.HOME.WaitDead(w=>
+            {
+                this._DoFaild();
+            });
 
     }
 
@@ -106,6 +112,21 @@ export default class GM extends cc.Component
                     }).Show();
         }
     }
+    _DoFaild()
+    {
+        if(this.Mod_WinFaild!=null)
+        {
+            var win = UI.CreateWindow<Win>(this.Mod_WinFaild);
+
+            if(win!=null && win.getComponent(Win)!=null)
+                win.getComponent(Win)?.WaitMsg((w,m)=>
+                    {
+     
+                        if(m=="RETRY") this._DoReplay();
+
+                    }).Show();
+        }
+    }
 
     _DoNext()
     {
@@ -115,8 +136,9 @@ export default class GM extends cc.Component
     }
     _DoReplay()
     {
-        var now=cc.director.getScene().name;
-        cc.director.loadScene(now);
+        var name="sc_Level - "+ EX.PrefixInteger(GM.LEVEL.ID,3);
+
+        cc.director.loadScene(name);
     }
 
 

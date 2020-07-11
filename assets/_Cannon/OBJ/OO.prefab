@@ -396,6 +396,8 @@
       "__id__": 5
     },
     "_enabled": true,
+    "DeadAction": 1,
+    "AutoLive": true,
     "DDTime": 0.1,
     "_id": ""
   },
@@ -407,9 +409,9 @@
       "__id__": 5
     },
     "_enabled": true,
+    "DeadAction": 1,
     "Life": 0.1,
     "Delay": 0,
-    "DeadAction": 1,
     "From": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -442,8 +444,10 @@
       "__id__": 1
     },
     "_enabled": true,
+    "DeadAction": 1,
+    "AutoLive": true,
     "label": null,
-    "ATT": 900,
+    "ATT": 400,
     "DeadStrick": 0,
     "Stable": 200,
     "Edge": {
