@@ -4,13 +4,15 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 
-import OBJ from "../OBJ/OBJ";
+
 import Enemy from "../OBJ/Enemy";
+import LiveObj from "../../__Lib/Base/LiveObj";
+
 
 const {ccclass, property} = cc._decorator;
 
     @ccclass
-    export default class Hatcher extends OBJ {
+    export default class Hatcher extends LiveObj {
 
         @property
         Delay :number =10;

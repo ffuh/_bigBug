@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import ClockObj from "../OBJ/ClockObj";
+import { EX } from "../../__Lib/EX";
 
 
 export class ActionObj 
@@ -90,6 +91,11 @@ export default class LevelClock extends cc.Component {
         for(let i=0;i<this._ObjArr.length;i++)
         {
             let who =this._ObjArr[i];
+            if(who==null || who.Obj==null ||who.Obj.node==null|| !who.Obj.node.activeInHierarchy)
+            {
+                EX.ListRemove(this._ObjArr,who);
+                continue;
+            }
             if(who!=null && who.Obj!=null && who.Update(dt).Waiting<=0) 
             {
 

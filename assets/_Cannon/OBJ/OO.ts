@@ -5,17 +5,18 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import OBJ from "./OBJ";
+
 import GM from "../GM";
 import Edge from "./Edge";
 import CSBase from "../../__Lib/CS/CSBase";
+import LiveObj from "../../__Lib/Base/LiveObj";
 
 
 
     const {ccclass, property} = cc._decorator;
 
     @ccclass
-    export default  class OO extends OBJ {
+    export default  class OO extends LiveObj {
     
         @property(cc.Label)
         label: cc.Label = null;
@@ -40,10 +41,6 @@ import CSBase from "../../__Lib/CS/CSBase";
     
         // onLoad () {}
         Speed:cc.Vec2;
-        start () 
-        {
-    
-        }
 
         Set(_speed:cc.Vec2):OO
         {
@@ -59,6 +56,7 @@ import CSBase from "../../__Lib/CS/CSBase";
         OnDead()
         {
             super.OnDead();
+
             let _ob=   cc.instantiate(this.Edge);
             let _edge= _ob!=null?_ob.getComponent(Edge):null;
 
@@ -78,19 +76,11 @@ import CSBase from "../../__Lib/CS/CSBase";
                 eff.position=cc.v3( this.GetWorldPosition());
             }
 
-
-            if(this._ONDead!=null)
-                this._ONDead();
             return this;
         }
 
 
-        _ONDead:Function;
-        WaitDead(on:Function):OO
-        {
-            this._ONDead=on;
-            return this;
-        }
+
         
         update (dt) 
         {
@@ -111,7 +101,7 @@ import CSBase from "../../__Lib/CS/CSBase";
 
             if(this.node.position.y<-1000)
             {
-               this._DoDead();
+               this.Dead();
             }
 
            // console.log("OO.Speed:" +this.Speed.mag());

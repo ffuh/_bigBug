@@ -7,7 +7,9 @@
 
 import Cannon from "./Cannon";
 import ClockObj from "./ClockObj";
-import { OBJState } from "./OBJ";
+import { LiveState } from "../../__Lib/Base/LiveObj";
+
+
 
 
     const {ccclass, property} = cc._decorator;
@@ -26,7 +28,7 @@ import { OBJState } from "./OBJ";
         {
             super.update(dt);
 
-            if(this.State==OBJState.osLiving && this.TurnLifeLeft>0)
+            if(this.State==LiveState.osLiving && this.TurnLifeLeft>0)
             {
                 this.node.position= this.node.position.add(cc.v3(-1*this.Speed*dt,0,0));
             }

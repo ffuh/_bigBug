@@ -5,12 +5,14 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import OBJ from "./OBJ";
+import LiveObj from "../../__Lib/Base/LiveObj";
+
+
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Edge extends OBJ
+export default class Edge extends LiveObj
  {
      @property
      DDTime=0.1;

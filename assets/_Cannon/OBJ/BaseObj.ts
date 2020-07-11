@@ -5,16 +5,14 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import OBJ from "./OBJ";
-
-
+import LiveObj from "../../__Lib/Base/LiveObj";
 
 
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class BaseObj extends OBJ 
+export default class BaseObj extends LiveObj 
 {
 
     @property

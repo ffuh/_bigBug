@@ -5,7 +5,6 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import BaseObj from "./BaseObj";
 import OO from "./OO";
 import GM from "../GM";
 import ClockObj from "./ClockObj";
@@ -50,10 +49,6 @@ export default class Cannon extends ClockObj {
         GM.CANNON=this;
     }
 
-    start () 
-    {
-        this.Shoot();
-    }
 
     Shoot()
     {

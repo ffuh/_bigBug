@@ -81,13 +81,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 67
-      },
-      {
         "__id__": 68
       },
       {
         "__id__": 69
+      },
+      {
+        "__id__": 70
       }
     ],
     "_prefab": null,
@@ -183,7 +183,7 @@
       "array": [
         0,
         0,
-        575.5387781844386,
+        760.3703045227372,
         0,
         0,
         0,
@@ -705,7 +705,7 @@
       "__id__": 13
     },
     "_enabled": true,
-    "AutoLive": true,
+    "DeadAction": 1,
     "label": null,
     "text": "hello",
     "_id": "a9OL4aWLhEOZV1xqoofvqt"
@@ -1051,6 +1051,7 @@
       "__id__": 11
     },
     "_enabled": true,
+    "DeadAction": 1,
     "AutoLive": true,
     "Name": "Name",
     "Desc": "Desc",
@@ -1148,6 +1149,7 @@
       "__id__": 24
     },
     "_enabled": true,
+    "DeadAction": 1,
     "AutoLive": false,
     "Delay": 1,
     "Mod_Enemy": {
@@ -1227,6 +1229,7 @@
       "__id__": 26
     },
     "_enabled": true,
+    "DeadAction": 1,
     "AutoLive": false,
     "Delay": 2,
     "Mod_Enemy": {
@@ -1245,9 +1248,13 @@
     },
     "_enabled": true,
     "ID": 1,
-    "Life": 180,
+    "Life": 50,
     "WindForce": 30,
     "WindStable": 100,
+    "Mod_WinSuccess": {
+      "__uuid__": "894c43ca-7094-4ef7-81a0-e603ef3a7452"
+    },
+    "Mod_WinFaild": null,
     "_id": "207/SnzhtH2JI+28S+6ZG6"
   },
   {
@@ -1292,7 +1299,11 @@
       }
     ],
     "_active": true,
-    "_components": [],
+    "_components": [
+      {
+        "__id__": 67
+      }
+    ],
     "_prefab": null,
     "_opacity": 255,
     "_color": {
@@ -1380,7 +1391,7 @@
       "array": [
         0,
         0,
-        575.5387781844386,
+        760.3703045227372,
         0,
         0,
         0,
@@ -2932,6 +2943,16 @@
       "__id__": 63
     },
     "_id": "11B88IjH5ExpY9TVpZwxFM"
+  },
+  {
+    "__type__": "79ef33A3/BEkaf9wiylZSKw",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 31
+    },
+    "_enabled": true,
+    "_id": "70bq6AFltDo4O7EzHv1V0/"
   },
   {
     "__type__": "cc.Canvas",

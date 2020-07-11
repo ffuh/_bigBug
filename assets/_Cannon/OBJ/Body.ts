@@ -6,10 +6,10 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import OO from "./OO";
-import OBJ from "./OBJ";
 import BaseObj from "./BaseObj";
 import Edge from "./Edge";
 import Cannon from "./Cannon";
+import OBJ from "../../__Lib/Base/OBJ";
 
 const {ccclass, property} = cc._decorator;
 
@@ -31,10 +31,6 @@ export default class Body extends OBJ {
     }
 
 
-    start ()
-    {
-
-    }
     onCollisionEnter(other:cc.Collider ,self:cc.Collider)
     {
         console.log("onCollisionEnter:"+other.node.name+":"+self.node.name);

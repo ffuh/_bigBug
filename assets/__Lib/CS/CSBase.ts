@@ -5,21 +5,16 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import BaseObj from "../../_Cannon/OBJ/BaseObj";
-import OBJ from "../../_Cannon/OBJ/OBJ";
+
+import OBJ from "../Base/OBJ";
+
 
 const {ccclass, property} = cc._decorator;
 
 
-export enum  DeadActionOption
-{
-    daNone=0,
-    daDestroy=1,
-    daDisactive=2,
-}
 
 @ccclass
-export default class CSBase extends cc.Component {
+export default class CSBase extends OBJ {
     
 
 
@@ -29,8 +24,7 @@ export default class CSBase extends cc.Component {
     @property
     Delay: number =0;
 
-    @property
-    DeadAction: DeadActionOption = DeadActionOption.daNone;
+  
 
 
 
@@ -71,26 +65,14 @@ export default class CSBase extends cc.Component {
 
     protected  OnLive()
     {
-        this.schedule(this._DoDead,this.Life);
+        this.schedule(this.Dead,this.Life);
     }
     protected OnDead()
     {
 
     }
 
-    private _DoDead()
-    {
-        this.Living=false;
-        this.OnDead();
 
-        switch(this.DeadAction)
-        {
-            case DeadActionOption.daDestroy:
-                this.node.destroy();break;
-            case DeadActionOption.daDisactive:
-                this.node.active=false;break;    
-        }
-    }
     
     
 }
