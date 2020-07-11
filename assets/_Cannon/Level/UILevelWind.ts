@@ -6,11 +6,12 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import GM from "../GM";
+import UIOBJ from "../../__Lib/Base/UIOBJ";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class UILevelWind extends cc.Component {
+export default class UILevelWind extends UIOBJ {
 
 
     @property(cc.Sprite)

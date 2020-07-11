@@ -1,8 +1,10 @@
 {
   "title": "BigBug",
   "packageName": "org.cocos2d.demo",
-  "startScene": "a96953aa-ad9e-4bf9-b186-ba164f4cc3e6",
-  "excludeScenes": [],
+  "startScene": "dd5c42cf-8cc7-4064-92c3-dfb677204be2",
+  "excludeScenes": [
+    "a96953aa-ad9e-4bf9-b186-ba164f4cc3e6"
+  ],
   "includeSDKBox": false,
   "orientation": {
     "landscapeLeft": true,

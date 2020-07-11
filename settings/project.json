@@ -71,7 +71,7 @@
     "height": 640,
     "width": 960
   },
-  "assets-sort-type": "name",
+  "assets-sort-type": "ext",
   "facebook": {
     "appID": "",
     "audience": {

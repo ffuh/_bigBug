@@ -6,11 +6,15 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import GM from "../GM";
+import Win from "../../__Lib/Base/Win";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class WinLevel extends cc.Component {
+export default class WinLevel extends Win {
+
+    @property(cc.Label)
+    LevelName: cc.Label ;
 
     @property(cc.Label)
     EnmCount: cc.Label ;
@@ -37,6 +41,10 @@ export default class WinLevel extends cc.Component {
 
     update (dt) 
     {
+
+        if(this.LevelName!=null && GM.LEVEL!=null)
+            this.LevelName.string= GM.LEVEL.Name();
+
         if(this.Progress!=null && GM.LEVEL!=null)
             this.Progress.fillRange= GM.LEVEL.Progress();
 

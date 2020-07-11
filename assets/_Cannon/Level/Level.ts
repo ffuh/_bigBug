@@ -35,10 +35,7 @@ import WinSuccess from "../UI/WinSuccess";
         @property
         WindStable:number =100;
 
-        @property (cc.Prefab)
-        Mod_WinSuccess:WinSuccess=null;
-        @property (cc.Prefab)
-        Mod_WinFaild:WinSuccess=null;
+
 
 
         _CLOCK:LevelClock;
@@ -60,9 +57,6 @@ import WinSuccess from "../UI/WinSuccess";
 
 
             GM.LEVEL=this;
-
-
-            this.scheduleOnce(this.Begin,2);
         }
         _OnAddObj(who:ClockObj)
         {
@@ -89,7 +83,14 @@ import WinSuccess from "../UI/WinSuccess";
 
 
         }
-        Begin()
+        Begin():Level
+        {
+            
+            this.scheduleOnce(this._DoBegin,0.1);
+            return this;
+        }
+
+        _DoBegin()
         {
             this._Enmes=new Array<Enemy>();
             if( this._MY !=null)
@@ -122,8 +123,10 @@ import WinSuccess from "../UI/WinSuccess";
             {
                 this._Wind.Set(this.WindForce,this.WindStable).Reset();
             }
-
         }
+
+
+
         EndResult=0;
         End(result)
         {
@@ -131,39 +134,19 @@ import WinSuccess from "../UI/WinSuccess";
 
             this._Runing=false;
 
-            if(result>0)
-            {
-                this.__DoSuccess(result);
-            }else
-            {
-                this.__DoFaile();
-            }
-
+            this._OnEnd?.call(this,result);
         }
-        private __DoSuccess(factor)
+
+
+
+        _OnEnd:Function;
+        WaitEnd(on:(result)=>void):Level
         {
-            
-           
-            if(this.Mod_WinSuccess!=null)
-            {
-                var win = UI.CreateWindow<WinSuccess>(this.Mod_WinSuccess);
-
-                if(win!=null && win.getComponent(WinSuccess)!=null)
-                    win.getComponent(WinSuccess).Set(factor).Show();
-            }
-            
+            this._OnEnd =on;
+            return this;
         }
-        private __DoFaile()
-        {
-            if(this.Mod_WinFaild!=null)
-            {
-                var win = UI.CreateWindow<WinSuccess>(this.Mod_WinFaild);
 
-                if(win!=null && win.getComponent(WinSuccess)!=null)
-                    win.getComponent(WinSuccess).Set(factor).Show();
-            }
-
-        }
+        Name():string {return "第"+this.ID.toString()+"关"; }
         Progress():number  {  return this._Runing?this._Lifing/this.Life:0;     }
         GetEnemyCount() { return  this._Enmes==null?0:this._Enmes.length;  }
         

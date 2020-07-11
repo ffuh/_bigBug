@@ -6,17 +6,23 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import UIOBJ from "../../__Lib/Base/UIOBJ";
+import Win from "../../__Lib/Base/Win";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class WinSuccess extends UIOBJ {
+export default class WinSuccess extends Win {
 
-    @property(cc.Label)
-    label: cc.Label = null;
+    @property(cc.Button)
+    btOK: cc.Button = null;
+    @property(cc.Button)
+    btRetry: cc.Button = null;
 
     @property
     text: string = 'hello';
+
+
+
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -32,5 +38,21 @@ export default class WinSuccess extends UIOBJ {
     }
 
 
+    // OnMsgCall(m)
+    // {
+    //     if(m=="OK")  this._DoNext();
+   
+    //     if(m=="RETRY") this._DoReplay();
+    // }
+    // _DoNext()
+    // {
+
+    // }
+    // _DoReplay()
+    // {
+    //     var now=cc.director.getScene().name;
+    //     cc.director.loadScene(now);
+
+    // }
     // update (dt) {}
 }

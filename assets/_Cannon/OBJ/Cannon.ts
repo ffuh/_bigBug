@@ -24,6 +24,8 @@ export default class Cannon extends ClockObj {
 
     @property
     PowerBase: number = 5;
+    @property
+    PowerSpeed: number = 100;
 
     @property
     Actiony: number = 100;
@@ -136,7 +138,7 @@ export default class Cannon extends ClockObj {
         super.update(dt);
         if(this._Powering)
         {
-            this.Powering+= dt*70;
+            this.Powering+= dt*this.PowerSpeed;
             if(this.Powering>100)
                 this.Powering=100;
         }

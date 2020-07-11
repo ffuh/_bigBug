@@ -6,11 +6,12 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import GM from "../GM";
+import Win from "../../__Lib/Base/Win";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class WinControl extends cc.Component {
+export default class WinControl extends Win {
 
     @property(cc.Label)
     Yaw: cc.Label = null;

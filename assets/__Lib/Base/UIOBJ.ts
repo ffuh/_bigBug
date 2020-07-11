@@ -37,5 +37,20 @@ export default class UIOBJ extends OBJ
 
     }
 
+    Close():UIOBJ
+    {
+        this.unschedule(this._DoClose);
+        this.scheduleOnce(this._DoClose,0.1);
+    
+        return this;
+    }
+    private _DoClose() 
+    {
+        this.Dead();
+        this.OnClose();
+    }
+    OnClose()
+    {
 
+    }
 }

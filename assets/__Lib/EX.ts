@@ -32,6 +32,11 @@ export namespace EX
             }
         }
     }
+
+    export function PrefixInteger(num, length) 
+    {
+        return ( "0000000000000000" + num ).substr( -length );
+    }
 }
  
 
