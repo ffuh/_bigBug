@@ -8,6 +8,7 @@
 import OO from "./OO";
 import GM from "../GM";
 import ClockObj from "./ClockObj";
+import Shooter from "./Shooter/Shooter";
 
 
 const {ccclass, property} = cc._decorator;
@@ -30,15 +31,16 @@ export default class Cannon extends ClockObj {
     @property
     Actiony: number = 100;
 
-    @property(cc.Node)
-    ShootRoot: cc.Node ;
     @property(cc.Prefab)
-    OOMod: cc.Node ;
+    EFF_ShooterUse:cc.Node;
+
 
     Powering:number=0;
     Yawing= 30;
 
+    _Shooters:Shooter[];
 
+    _NowShooter:Shooter;
     onLoad ()
     {
         this.Name="MY";
@@ -47,31 +49,58 @@ export default class Cannon extends ClockObj {
 
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
 
+        this._Shooters=this.getComponentsInChildren(Shooter);
 
         GM.CANNON=this;
     }
 
+    UseShoot(num):Cannon
+    {
+        if(this._Shooters==null || this._Shooters.length<1)
+        return this;
+
+        if(num>this._Shooters.length) num =this._Shooters.length-1;
+
+        this._NowShooter = this._Shooters[num];
+
+        return this;
+    }
+    UseShootEx(sh:Shooter):Cannon
+    {
+        if(this._Shooters==null || this._Shooters.length<1)
+        return this;
+
+        this._NowShooter = sh;
+
+        if(this.EFF_ShooterUse!=null)
+        {
+            var eff=  cc.instantiate(this.EFF_ShooterUse);
+            eff.setParent(cc.director.getScene());
+        }
+            
+
+        return this;
+    }
+    GetShoot(num):Shooter
+    {
+        if(this._Shooters==null || this._Shooters.length<1) return null;
+
+        if(num>this._Shooters.length)  return null; 
+
+        return this._Shooters[num];
+    }
 
     Shoot()
     {
-        //cc.instantiate(this.OOMod)?.Set(new cc.Vec2(100,100));
-
-        let ooo = cc.instantiate(this.OOMod);
-        if(ooo != null)
-        {                  
-            ooo.parent = cc.director.getScene();
-            ooo.setPosition( this.ShootRoot.convertToWorldSpace(cc.Vec2.ZERO)   );
-            
-            
-            let _speed = new cc.Vec2(Math.cos(this.Yawing*3.14/180),Math.sin(this.Yawing*3.14/180)).mul(this.Powering*this.PowerBase);
+        if(this._NowShooter==null)  this.UseShoot(0);
+        if(this._NowShooter==null) return;
 
 
-            ooo.getComponent(OO)?.Set(_speed).WaitDead(()=>
-            {
-                this.TurnOver();
+        let _speed = new cc.Vec2(Math.cos(this.Yawing*3.14/180),Math.sin(this.Yawing*3.14/180)).mul(this.Powering*this.PowerBase);
 
-            });                 
-        }
+        this._NowShooter.Shoot(_speed);
+
+        return ;
     }
 
     onKeyUp (event) 
@@ -142,5 +171,13 @@ export default class Cannon extends ClockObj {
             if(this.Powering>100)
                 this.Powering=100;
         }
+    }
+
+    FireCDing()
+    {
+        if(this._NowShooter==null) this.UseShoot(0);
+        if(this._NowShooter==null) return 1;
+
+        return this._NowShooter.CDing();
     }
 }

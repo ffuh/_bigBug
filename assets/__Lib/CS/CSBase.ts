@@ -65,7 +65,8 @@ export default class CSBase extends OBJ {
 
     protected  OnLive()
     {
-        this.schedule(this.Dead,this.Life);
+        if(this.Life>0)
+            this.schedule(this.Dead,this.Life);
     }
     protected OnDead()
     {
