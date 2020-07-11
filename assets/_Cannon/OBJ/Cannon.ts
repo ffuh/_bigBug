@@ -41,6 +41,9 @@ export default class Cannon extends ClockObj {
     _Shooters:Shooter[];
 
     _NowShooter:Shooter;
+
+    _Waiting=0;
+    _WaitingMax=0;
     onLoad ()
     {
         this.Name="MY";
@@ -99,9 +102,15 @@ export default class Cannon extends ClockObj {
         let _speed = new cc.Vec2(Math.cos(this.Yawing*3.14/180),Math.sin(this.Yawing*3.14/180)).mul(this.Powering*this.PowerBase);
 
         this._NowShooter.Shoot(_speed);
-
+        this.AddWaiting(this._NowShooter.CD);
         return ;
     }
+    AddWaiting(wt)
+    {
+        this._Waiting+=wt;
+        this._WaitingMax=this._Waiting;
+    }
+    WaitPercemt(){return this._WaitingMax<=0?0:  this._Waiting/ this._WaitingMax;    }
 
     onKeyUp (event) 
     {        
@@ -171,6 +180,9 @@ export default class Cannon extends ClockObj {
             if(this.Powering>100)
                 this.Powering=100;
         }
+
+        if(this._Waiting>0)
+            this._Waiting-=dt;
     }
 
     FireCDing()
