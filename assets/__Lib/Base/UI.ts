@@ -12,15 +12,11 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class UI extends cc.Component {
 
-    @property (cc.Node)
-    Root:cc.Node=null;
 
     static _Instance:UI;
     onLoad()
     {
         UI._Instance=this;
-        if(this.Root==null)
-            this.Root=this.node;
     }
 
 
@@ -29,7 +25,7 @@ export default class UI extends cc.Component {
         if(mod==null)      return null;
 
         var _ob=  cc.instantiate(mod);
-        _ob.setParent(UI._Instance==null?cc.director.getScene():  UI._Instance.Root);
+        _ob.setParent(UI._Instance.node);
 
         return _ob ;
     }

@@ -13,11 +13,7 @@ const {ccclass, property} = cc._decorator;
 export default class UIPowerButton extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
-    @property(cc.Sprite)
-    CDing:cc.Sprite =null;
 
-    @property(cc.Sprite)
-    ICON:cc.Sprite =null;
     onLoad () 
     {
        // this._Button=this.getComponent(cc.Button);
@@ -32,21 +28,11 @@ export default class UIPowerButton extends cc.Component {
     }
     onMouseDown()
     {
-        if(GM.CANNON==null || GM.CANNON.FireCDing()>0) return;
-
         GM.CANNON.PowerBegin();
     }
     onMouseUp()
     {
-        if(GM.CANNON==null || GM.CANNON.FireCDing()>0) return;
         GM.CANNON.PowerEnd();
     }
-    update (dt)
-    {
-        if(this.CDing!=null && GM.CANNON!=null)
-            this.CDing.fillRange =GM.CANNON.FireCDing();
-
-        if(this.ICON!=null && GM.CANNON!=null)
-            this.ICON.spriteFrame=GM.CANNON._NowShooter.ICON;
-    }
+    // update (dt) {}
 }

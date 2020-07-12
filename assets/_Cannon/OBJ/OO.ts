@@ -18,8 +18,8 @@ import LiveObj from "../../__Lib/Base/LiveObj";
     @ccclass
     export default  class OO extends LiveObj {
     
-        @property
-        UponDir = false;
+        @property(cc.Label)
+        label: cc.Label = null;
     
         @property
         ATT: number = 900;
@@ -33,8 +33,6 @@ import LiveObj from "../../__Lib/Base/LiveObj";
 
         @property(cc.Node)
         Edge: cc.Node = null;
-
-
 
         @property(cc.Prefab)
         Eff_D: cc.Node = null;
@@ -100,13 +98,6 @@ import LiveObj from "../../__Lib/Base/LiveObj";
             let _newpos=this.node.position.add(cc.v3(_dpos)  );
 
             this.node.setPosition(_newpos);
-
-
-            if(this.UponDir)
-            {
-                var a= cc.Vec2.UP.signAngle(this.Speed)*180/3.14;
-                this.node.angle = a;
-            }
 
             if(this.node.position.y<-1000)
             {

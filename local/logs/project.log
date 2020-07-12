@@ -1,0 +1,842 @@
+2020-07-10T14:06:21.395Z - normal: Load ~/.CocosCreator/settings.json
+2020-07-10T14:06:21.430Z - normal: Initializing Asset Database
+2020-07-10T14:06:21.437Z - normal: checking language setting...
+2020-07-10T14:06:21.437Z - normal: Language: zh
+2020-07-10T14:06:22.155Z - success: protocol editor-framework registered
+2020-07-10T14:06:22.155Z - success: protocol app registered
+2020-07-10T14:06:22.155Z - success: protocol theme registered
+2020-07-10T14:06:22.155Z - success: protocol packages registered
+2020-07-10T14:06:22.155Z - success: protocol uuid registerred
+2020-07-10T14:06:22.155Z - success: protocol db registerred
+2020-07-10T14:06:22.155Z - success: protocol thumbnail registerred
+2020-07-10T14:06:22.156Z - success: protocol unpack registerred
+2020-07-10T14:06:22.156Z - success: protocol disable-commonjs registerred
+2020-07-10T14:06:22.234Z - normal: connected!
+2020-07-10T14:06:22.235Z - normal: Check project F:\_Product\__BigBug\_Project\BigBug_CC
+2020-07-10T14:06:22.236Z - normal: Initializing project F:\_Product\__BigBug\_Project\BigBug_CC
+2020-07-10T14:06:22.364Z - success: adapters loaded
+2020-07-10T14:06:22.367Z - success: asset-db-debugger loaded
+2020-07-10T14:06:22.420Z - success: fb-audience-network loaded
+2020-07-10T14:06:22.445Z - success: fb-live-stream loaded
+2020-07-10T14:06:22.447Z - success: google-play-instant loaded
+2020-07-10T14:06:22.448Z - success: jsb-adapter loaded
+2020-07-10T14:06:22.450Z - success: package-manager loaded
+2020-07-10T14:06:22.450Z - success: runtime-adapters loaded
+2020-07-10T14:06:22.452Z - success: runtime-dev-tools loaded
+2020-07-10T14:06:22.455Z - success: sdkbox loaded
+2020-07-10T14:06:22.456Z - success: ui-kit-preview-extra loaded
+2020-07-10T14:06:22.457Z - success: ui-kit-preview loaded
+2020-07-10T14:06:22.497Z - success: alipay-minigame loaded
+2020-07-10T14:06:22.554Z - success: assets loaded
+2020-07-10T14:06:22.556Z - success: baidugame-opendata loaded
+2020-07-10T14:06:22.558Z - success: baidugame loaded
+2020-07-10T14:06:22.559Z - success: builder loaded
+2020-07-10T14:06:22.562Z - success: cloud-function loaded
+2020-07-10T14:06:22.689Z - success: cocos-services loaded
+2020-07-10T14:06:22.692Z - success: console loaded
+2020-07-10T14:06:22.693Z - success: curve-editor loaded
+2020-07-10T14:06:22.702Z - success: fb-instant-games loaded
+2020-07-10T14:06:22.704Z - success: game-window loaded
+2020-07-10T14:06:22.704Z - success: google-instant-games loaded
+2020-07-10T14:06:22.707Z - success: hierarchy loaded
+2020-07-10T14:06:22.709Z - success: huawei-runtime loaded
+2020-07-10T14:06:22.710Z - success: inspector loaded
+2020-07-10T14:06:22.722Z - success: cpk-publish loaded
+2020-07-10T14:06:22.722Z - success: keystore loaded
+2020-07-10T14:06:22.729Z - success: node-library loaded
+2020-07-10T14:06:22.729Z - success: open-recent-items loaded
+2020-07-10T14:06:22.731Z - success: oppo-runtime loaded
+2020-07-10T14:06:22.732Z - success: package-asset loaded
+2020-07-10T14:06:22.733Z - success: preferences loaded
+2020-07-10T14:06:22.733Z - success: project-importer loaded
+2020-07-10T14:06:22.734Z - success: project-settings loaded
+2020-07-10T14:06:22.746Z - success: qtt-runtime loaded
+2020-07-10T14:06:22.748Z - success: scene loaded
+2020-07-10T14:06:22.748Z - success: simulator-debugger loaded
+2020-07-10T14:06:22.749Z - success: sprite-editor loaded
+2020-07-10T14:06:22.774Z - success: store loaded
+2020-07-10T14:06:22.779Z - success: timeline loaded
+2020-07-10T14:06:22.781Z - success: vivo-runtime loaded
+2020-07-10T14:06:22.783Z - success: wechatgame-opendata loaded
+2020-07-10T14:06:22.785Z - success: wechatgame loaded
+2020-07-10T14:06:22.787Z - success: xiaomi-runtime loaded
+2020-07-10T14:06:22.913Z - success: im-plugin loaded
+2020-07-10T14:06:22.915Z - success: preview server running at http://localhost:7456
+2020-07-10T14:06:23.656Z - info: Cocos Service load base data!
+2020-07-10T14:06:24.067Z - normal: Initializing Cocos2d
+2020-07-10T14:06:24.357Z - normal: Initializing engine extends
+2020-07-10T14:06:27.224Z - normal: Loading packages
+2020-07-10T14:06:27.227Z - normal: Watching packages
+2020-07-10T14:06:27.249Z - normal: Run Application
+2020-07-10T14:06:33.715Z - warn: Please specifiy a default value for "OBJ.UDD" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.717Z - warn: Please specifiy a default value for "BaseObj.MOD_Tip" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.717Z - warn: Please specifiy a default value for "BaseObj.MOD_Info" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.717Z - warn: Please specifiy a default value for "ClockObj.MOD_TurnTip" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.718Z - warn: Please specifiy a default value for "Hatcher.Mod_Enemy" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.723Z - warn: Please specifiy a default value for "Cannon.ShootRoot" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.723Z - warn: Please specifiy a default value for "Cannon.OOMod" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.730Z - warn: Please specifiy a default value for "WinLevel.EnmCount" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.730Z - warn: Please specifiy a default value for "WinLevel.ProcentText" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.733Z - warn: Please specifiy a default value for "Barr.bulletPrefab" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.733Z - warn: Please specifiy a default value for "Barr.SpeedCurve" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.736Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:06:33.738Z - warn: Please specifiy a default value for "Time.text_time" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.738Z - warn: Please specifiy a default value for "Time.text_delaytime" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.738Z - warn: Please specifiy a default value for "BarrageEmission.bulletPrefab" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.742Z - warn: Please specifiy a default value for "BarrageEmission_Rect_Rotate.agnle" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.742Z - warn: Please specifiy a default value for "BarrageEmission_Rect_Rotate.count" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.745Z - warn: Please specifiy a default value for "BCAttacky.Target" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.746Z - warn: Please specifiy a default value for "BCombater.mOwner" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:33.755Z - warn: Please specifiy a default value for "TOUCH.Bound" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T14:06:40.632Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:06:40.633Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:06:40.633Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:06:40.928Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:06:40.928Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:06:40.928Z - normal: Simulator: Project Config:
+2020-07-10T14:06:40.929Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:06:40.929Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:06:40.929Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:06:40.929Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:06:40.929Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:06:40.929Z - normal: Simulator:     show console: NO
+2020-07-10T14:06:40.930Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:06:40.930Z - normal: Simulator:     listen: 
+2020-07-10T14:06:40.930Z - normal: Simulator:     debugger: none
+2020-07-10T14:06:40.930Z - normal: Simulator:     add searching path:
+2020-07-10T14:06:40.930Z - normal: Simulator: 
+2020-07-10T14:06:40.930Z - normal: Simulator: 
+2020-07-10T14:06:40.930Z - normal: Simulator: 
+2020-07-10T14:06:40.931Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:06:40.931Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:06:40.931Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:06:40.931Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:06:40.931Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:06:40.931Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:06:40.931Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:06:40.932Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:06:40.932Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:06:40.932Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:06:40.932Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:06:40.932Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:06:40.932Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:06:41.129Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:06:41.198Z - normal: Simulator: iShow!
+2020-07-10T14:06:41.235Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:06:41.245Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 83.738ms
+2020-07-10T14:06:41.426Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:06:41.426Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:06:41.550Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:06:44.492Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: cc.Action is deprecated, please use cc.TweenAction instead
+2020-07-10T14:06:46.946Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:06:52.850Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:06:55.322Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:06:58.040Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:06:58.041Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 172, all objects: 460
+2020-07-10T14:06:58.046Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 158, all objects: 436
+2020-07-10T14:06:58.047Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 158, all objects: 436
+2020-07-10T14:06:58.052Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 158, all objects: 436
+2020-07-10T14:06:58.057Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:06:58.058Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:06:58.058Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:06:58.063Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:06:58.275Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T14:08:11.120Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:08:11.121Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:08:11.121Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:08:11.444Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:08:11.444Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:08:11.444Z - normal: Simulator: Project Config:
+2020-07-10T14:08:11.444Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:08:11.445Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:08:11.445Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:08:11.445Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:08:11.445Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:08:11.445Z - normal: Simulator:     show console: NO
+2020-07-10T14:08:11.445Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:08:11.445Z - normal: Simulator:     listen: 
+2020-07-10T14:08:11.445Z - normal: Simulator:     debugger: none
+2020-07-10T14:08:11.445Z - normal: Simulator:     add searching path:
+2020-07-10T14:08:11.446Z - normal: Simulator: 
+2020-07-10T14:08:11.446Z - normal: Simulator: 
+2020-07-10T14:08:11.446Z - normal: Simulator: 
+2020-07-10T14:08:11.446Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:08:11.446Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:08:11.446Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:08:11.446Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:08:11.446Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:08:11.447Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:08:11.447Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:08:11.447Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:08:11.447Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:08:11.447Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:08:11.447Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:08:11.447Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:08:11.448Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:08:11.662Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:08:11.686Z - normal: Simulator: iShow!
+2020-07-10T14:08:11.762Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:08:11.773Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 83.64999999999998ms
+2020-07-10T14:08:11.955Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:08:11.955Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:08:12.065Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:08:14.189Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:08:14.189Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 155, all objects: 429
+2020-07-10T14:08:14.192Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 148, all objects: 417
+2020-07-10T14:08:14.192Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 148, all objects: 417
+2020-07-10T14:08:14.198Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 148, all objects: 417
+2020-07-10T14:08:14.203Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:08:14.203Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:08:14.204Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:08:14.208Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:08:14.403Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T14:09:22.050Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:09:22.055Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:09:22.055Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:09:22.390Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:09:22.390Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:09:22.390Z - normal: Simulator: Project Config:
+2020-07-10T14:09:22.390Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:09:22.390Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:09:22.390Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:09:22.391Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:09:22.391Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:09:22.391Z - normal: Simulator:     show console: NO
+2020-07-10T14:09:22.391Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:09:22.391Z - normal: Simulator:     listen: 
+2020-07-10T14:09:22.391Z - normal: Simulator:     debugger: none
+2020-07-10T14:09:22.392Z - normal: Simulator:     add searching path:
+2020-07-10T14:09:22.392Z - normal: Simulator: 
+2020-07-10T14:09:22.393Z - normal: Simulator: 
+2020-07-10T14:09:22.393Z - normal: Simulator: 
+2020-07-10T14:09:22.393Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:09:22.394Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:09:22.394Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:09:22.394Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:09:22.394Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:09:22.394Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:09:22.394Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:09:22.394Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:09:22.395Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:09:22.395Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:09:22.395Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:09:22.395Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:09:22.395Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:09:22.585Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:09:22.611Z - normal: Simulator: iShow!
+2020-07-10T14:09:22.696Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:09:22.707Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 89.16200000000003ms
+2020-07-10T14:09:22.886Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:09:22.886Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:09:22.998Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:09:25.950Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: cc.Action is deprecated, please use cc.TweenAction instead
+2020-07-10T14:09:30.743Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:09:31.909Z - normal: Simulator: D/jswrapper (132): JS: OO.onCollisionEnter:Body:OO
+2020-07-10T14:09:31.935Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:OO:Body
+2020-07-10T14:09:31.955Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:31.956Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14153]_HP(833)]: 367
+2020-07-10T14:09:31.956Z - normal: Simulator: D/jswrapper (132): JS: att：367
+2020-07-10T14:09:32.005Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:32.005Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14155]_HP(855)]: 45
+2020-07-10T14:09:32.005Z - normal: Simulator: D/jswrapper (132): JS: att：46
+2020-07-10T14:09:32.558Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:32.608Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:32.858Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:32.909Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.162Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.212Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.462Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.512Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.763Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.812Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:33.982Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:09:34.066Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:34.117Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:34.919Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 0.1 to 0.1"
+2020-07-10T14:09:35.135Z - normal: Simulator: D/jswrapper (132): JS: OO.onCollisionEnter:Body:OO
+2020-07-10T14:09:35.137Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:OO:Body
+2020-07-10T14:09:35.168Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:35.168Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14153]_HP(195)]: 639
+2020-07-10T14:09:35.169Z - normal: Simulator: D/jswrapper (132): JS: att：639
+2020-07-10T14:09:35.202Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:35.202Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14155]_HP(710)]: 145
+2020-07-10T14:09:35.202Z - normal: Simulator: D/jswrapper (132): JS: att：145
+2020-07-10T14:09:35.769Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:35.802Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.069Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.104Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.370Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.404Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.622Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:09:36.672Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.706Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:36.973Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:37.006Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:37.274Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:37.308Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:37.843Z - normal: Simulator: D/jswrapper (132): JS: OO.onCollisionEnter:Body:OO
+2020-07-10T14:09:37.846Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:OO:Body
+2020-07-10T14:09:37.859Z - normal: Simulator: D/jswrapper (132): JS: OO.onCollisionEnter:Body:OO
+2020-07-10T14:09:37.860Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 0 to 0"
+2020-07-10T14:09:37.862Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:OO:Body
+2020-07-10T14:09:37.878Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:37.879Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14155]_HP(81)]: 629
+2020-07-10T14:09:37.879Z - normal: Simulator: D/jswrapper (132): JS: att：630
+2020-07-10T14:09:37.879Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:37.879Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14155]_HP(0)]: 636
+2020-07-10T14:09:37.879Z - normal: Simulator: D/jswrapper (132): JS: att：636
+2020-07-10T14:09:37.893Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:37.893Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14153]_HP(0)]: 252
+2020-07-10T14:09:37.893Z - normal: Simulator: D/jswrapper (132): JS: att：252
+2020-07-10T14:09:37.895Z - normal: Simulator: D/jswrapper (132): JS: onCollisionEnter:Edge:Body
+2020-07-10T14:09:37.896Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 0 to 0"
+2020-07-10T14:09:37.896Z - normal: Simulator: D/jswrapper (132): JS: [OBJ Hurt@Enm001[14153]_HP(0)]: 188
+2020-07-10T14:09:37.896Z - normal: Simulator: D/jswrapper (132): JS: att：189
+2020-07-10T14:09:38.479Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.479Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.495Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.496Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.779Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.779Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.795Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:38.795Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.080Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.080Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.097Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.097Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.380Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.381Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.397Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.397Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.681Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.681Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.698Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.698Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.797Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:09:39.982Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:39.982Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:40.000Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:40.000Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 2 to 2"
+2020-07-10T14:09:44.130Z - normal: Simulator: D/jswrapper (132): JS: CCScheduler#scheduleSelector. Selector already scheduled. Updating interval from: 0.1 to 0.1"
+2020-07-10T14:09:50.716Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:09:50.716Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 174, all objects: 461
+2020-07-10T14:09:50.723Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 156, all objects: 428
+2020-07-10T14:09:50.724Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 156, all objects: 428
+2020-07-10T14:09:50.727Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 156, all objects: 428
+2020-07-10T14:09:50.731Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:09:50.731Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:09:50.731Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:09:50.736Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:09:50.933Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T14:15:26.605Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:15:26.609Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:15:26.611Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:15:26.936Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:15:26.937Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:15:26.937Z - normal: Simulator: Project Config:
+2020-07-10T14:15:26.937Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:15:26.937Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:15:26.937Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:15:26.937Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:15:26.938Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:15:26.938Z - normal: Simulator:     show console: NO
+2020-07-10T14:15:26.938Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:15:26.938Z - normal: Simulator:     listen: 
+2020-07-10T14:15:26.938Z - normal: Simulator:     debugger: none
+2020-07-10T14:15:26.938Z - normal: Simulator:     add searching path:
+2020-07-10T14:15:26.938Z - normal: Simulator: 
+2020-07-10T14:15:26.938Z - normal: Simulator: 
+2020-07-10T14:15:26.938Z - normal: Simulator: 
+2020-07-10T14:15:26.939Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:15:26.939Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:26.939Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:15:26.939Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:26.939Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:15:26.939Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:15:26.939Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:15:26.940Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:15:26.940Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:15:26.940Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:15:26.940Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:26.940Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:15:26.940Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:27.128Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:15:27.153Z - normal: Simulator: iShow!
+2020-07-10T14:15:27.229Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:15:27.243Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 86.99900000000002ms
+2020-07-10T14:15:27.425Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:15:27.426Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:15:27.535Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:15:30.491Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: cc.Action is deprecated, please use cc.TweenAction instead
+2020-07-10T14:15:40.085Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:15:40.085Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 166, all objects: 449
+2020-07-10T14:15:40.093Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 159, all objects: 437
+2020-07-10T14:15:40.093Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 159, all objects: 437
+2020-07-10T14:15:40.098Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 159, all objects: 437
+2020-07-10T14:15:40.103Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:15:40.103Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:15:40.103Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:15:40.108Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:15:40.307Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T14:15:52.283Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:15:52.283Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:15:52.283Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:15:52.594Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:15:52.594Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:15:52.594Z - normal: Simulator: Project Config:
+2020-07-10T14:15:52.594Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:15:52.595Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:15:52.595Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:15:52.595Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:15:52.595Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:15:52.595Z - normal: Simulator:     show console: NO
+2020-07-10T14:15:52.595Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:15:52.596Z - normal: Simulator:     listen: 
+2020-07-10T14:15:52.596Z - normal: Simulator:     debugger: none
+2020-07-10T14:15:52.596Z - normal: Simulator:     add searching path:
+2020-07-10T14:15:52.596Z - normal: Simulator: 
+2020-07-10T14:15:52.596Z - normal: Simulator: 
+2020-07-10T14:15:52.597Z - normal: Simulator: 
+2020-07-10T14:15:52.597Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:15:52.597Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:52.597Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:15:52.597Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:52.597Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:15:52.598Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:15:52.598Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:15:52.598Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:15:52.598Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:15:52.598Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:15:52.598Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:52.598Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:15:52.598Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:15:52.805Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:15:52.829Z - normal: Simulator: iShow!
+2020-07-10T14:15:52.906Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:15:52.920Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 85.79199999999997ms
+2020-07-10T14:15:53.100Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:15:53.100Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:15:53.209Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:15:56.153Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: cc.Action is deprecated, please use cc.TweenAction instead
+2020-07-10T14:15:59.021Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:15:59.021Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 166, all objects: 449
+2020-07-10T14:15:59.027Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 159, all objects: 437
+2020-07-10T14:15:59.027Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 159, all objects: 437
+2020-07-10T14:15:59.033Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 159, all objects: 437
+2020-07-10T14:15:59.038Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:15:59.038Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:15:59.038Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:15:59.043Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:15:59.238Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T14:17:48.076Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:17:48.076Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:17:48.076Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:17:48.399Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:17:48.399Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:17:48.399Z - normal: Simulator: Project Config:
+2020-07-10T14:17:48.399Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:17:48.400Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:17:48.400Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:17:48.400Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:17:48.400Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:17:48.400Z - normal: Simulator:     show console: NO
+2020-07-10T14:17:48.400Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:17:48.400Z - normal: Simulator:     listen: 
+2020-07-10T14:17:48.400Z - normal: Simulator:     debugger: none
+2020-07-10T14:17:48.400Z - normal: Simulator:     add searching path:
+2020-07-10T14:17:48.400Z - normal: Simulator: 
+2020-07-10T14:17:48.400Z - normal: Simulator: 
+2020-07-10T14:17:48.400Z - normal: Simulator: 
+2020-07-10T14:17:48.401Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:17:48.401Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:17:48.401Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:17:48.401Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:17:48.401Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:17:48.401Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:17:48.401Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:17:48.401Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:17:48.401Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:17:48.401Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:17:48.402Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:17:48.402Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:17:48.402Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:17:48.601Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:17:48.627Z - normal: Simulator: iShow!
+2020-07-10T14:17:48.709Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:17:48.721Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 83.21800000000002ms
+2020-07-10T14:17:48.896Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:17:48.896Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:17:49.008Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:17:51.967Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: cc.Action is deprecated, please use cc.TweenAction instead
+2020-07-10T14:17:55.398Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:17:55.398Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 171, all objects: 459
+2020-07-10T14:17:55.403Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 164, all objects: 447
+2020-07-10T14:17:55.403Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 164, all objects: 447
+2020-07-10T14:17:55.409Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 164, all objects: 447
+2020-07-10T14:17:55.414Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:17:55.414Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:17:55.414Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:17:55.419Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:17:55.615Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T14:18:06.892Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2020-07-10T14:18:06.895Z - normal: Simulator: WORKAREA WIDTH 1528.00, HEIGHT 773.00
+2020-07-10T14:18:06.897Z - normal: Simulator: FRAME SCALE = 0.75
+2020-07-10T14:18:07.204Z - normal: Simulator: Ready for GLSL
+2020-07-10T14:18:07.205Z - normal: Simulator: Ready for OpenGL 2.0
+2020-07-10T14:18:07.205Z - normal: Simulator: Project Config:
+2020-07-10T14:18:07.205Z - normal: Simulator:     project dir: C:\CocosDashboard_1.0.7\resources\.editors\Creator\2.4.0\resources\cocos2d-x\simulator\win32\
+2020-07-10T14:18:07.206Z - normal: Simulator:     writable path: $(PROJDIR)\
+2020-07-10T14:18:07.206Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2020-07-10T14:18:07.206Z - normal: Simulator:     frame size: 2000 x 1000
+2020-07-10T14:18:07.206Z - normal: Simulator:     frame scale: 0.75
+2020-07-10T14:18:07.206Z - normal: Simulator:     show console: NO
+2020-07-10T14:18:07.207Z - normal: Simulator:     write debug log: NO ()
+2020-07-10T14:18:07.207Z - normal: Simulator:     listen: 
+2020-07-10T14:18:07.207Z - normal: Simulator:     debugger: none
+2020-07-10T14:18:07.208Z - normal: Simulator:     add searching path:
+2020-07-10T14:18:07.208Z - normal: Simulator: 
+2020-07-10T14:18:07.208Z - normal: Simulator: 
+2020-07-10T14:18:07.208Z - normal: Simulator: 
+2020-07-10T14:18:07.209Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:18:07.209Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:18:07.209Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2020-07-10T14:18:07.209Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:18:07.209Z - normal: Simulator: D/jswrapper (380): Initializing V8, version: 8.0.426.16
+2020-07-10T14:18:07.209Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2020-07-10T14:18:07.210Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2020-07-10T14:18:07.210Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2020-07-10T14:18:07.210Z - normal: Simulator: D/jswrapper (132): JS: Enable batch GL commands optimization!
+2020-07-10T14:18:07.210Z - normal: Simulator: resetDesignResolution request
+2020-07-10T14:18:07.210Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:18:07.210Z - normal: Simulator: LOAD Js FILE: main.js
+2020-07-10T14:18:07.210Z - normal: Simulator: ------------------------------------------------
+2020-07-10T14:18:07.413Z - normal: Simulator: D/jswrapper (132): JS: Read json failed: Unexpected end of JSON input
+2020-07-10T14:18:07.438Z - normal: Simulator: iShow!
+2020-07-10T14:18:07.522Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T14:18:07.533Z - normal: Simulator: D/jswrapper (132): JS: load __quick_compile_project__: 83.73200000000003ms
+2020-07-10T14:18:07.711Z - normal: Simulator: D/renderer (616): Device caps: maxVextexTextures: 32, maxFragUniforms: 4096, maxTextureUints: 32, maxVertexAttributes: 29, maxDrawBuffers: 8, maxColorAttatchments: 8
+2020-07-10T14:18:07.711Z - normal: Simulator: D/jswrapper (132): JS: Cocos Creator v2.4.0
+2020-07-10T14:18:07.824Z - normal: Simulator: D/jswrapper (151): JS: [WARN]: Sorry, cc.Node.convertToWorldSpace is deprecated. Please use convertToWorldSpaceAR instead
+2020-07-10T14:18:10.768Z - normal: Simulator: D/jswrapper (132): JS: [WARN]: cc.Action is deprecated, please use cc.TweenAction instead
+2020-07-10T14:18:12.880Z - normal: Simulator: D/jswrapper (473): ScriptEngine::cleanup begin ...
+2020-07-10T14:18:12.881Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 171, all objects: 459
+2020-07-10T14:18:12.882Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 164, all objects: 447
+2020-07-10T14:18:12.883Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 164, all objects: 447
+2020-07-10T14:18:12.890Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 164, all objects: 447
+2020-07-10T14:18:12.895Z - normal: Simulator: D/jswrapper (613): GC begin ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:18:12.895Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2020-07-10T14:18:12.895Z - normal: Simulator: D/jswrapper (631): GC end ..., (js->native map) size: 0, all objects: -1
+2020-07-10T14:18:12.900Z - normal: Simulator: D/jswrapper (534): ScriptEngine::cleanup end ...
+2020-07-10T14:18:13.087Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2020-07-10T15:33:31.061Z - info: 只有预制节点 "OO" 及其子节点会被保存。
+2020-07-10T15:33:40.296Z - info: 只有预制节点 "OO" 及其子节点会被保存。
+2020-07-10T15:56:41.892Z - warn: Please specifiy a default value for "BaseObj.MOD_Tip" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.893Z - warn: Please specifiy a default value for "BaseObj.MOD_Info" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.893Z - warn: Please specifiy a default value for "ClockObj.MOD_TurnTip" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.894Z - warn: Please specifiy a default value for "Hatcher.Mod_Enemy" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.898Z - warn: Please specifiy a default value for "Cannon.ShootRoot" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.898Z - warn: Please specifiy a default value for "Cannon.OOMod" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.904Z - warn: Please specifiy a default value for "WinLevel.EnmCount" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.905Z - warn: Please specifiy a default value for "WinLevel.ProcentText" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.908Z - warn: Please specifiy a default value for "Barr.bulletPrefab" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.908Z - warn: Please specifiy a default value for "Barr.SpeedCurve" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.912Z - warn: Can not instantiate CCClass 'undefined' with arguments.
+2020-07-10T15:56:41.914Z - warn: Please specifiy a default value for "Time.text_time" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.914Z - warn: Please specifiy a default value for "Time.text_delaytime" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.914Z - warn: Please specifiy a default value for "BarrageEmission.bulletPrefab" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.917Z - warn: Please specifiy a default value for "BarrageEmission_Rect_Rotate.agnle" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.917Z - warn: Please specifiy a default value for "BarrageEmission_Rect_Rotate.count" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.919Z - warn: Please specifiy a default value for "BCAttacky.Target" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.921Z - warn: Please specifiy a default value for "BCombater.mOwner" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T15:56:41.929Z - warn: Please specifiy a default value for "TOUCH.Bound" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2020-07-10T16:04:09.828Z - info: 只有预制节点 "Bug001" 及其子节点会被保存。
+2020-07-10T16:06:20.695Z - warn: The Asset used by component "cc.Sprite" in prefab "Bug001.prefab" is missing. Detailed information:
+Node path: "Bug001/Body"
+Asset url: "db://assets/_Prefab/Bug/Bug001.prefab"
+Missing uuid: "683ea512-23d5-4111-b3b8-c51fd56f336b"
+
+2020-07-10T16:06:20.727Z - warn: The Asset used by component "cc.Sprite" in prefab "Bug001.prefab" is missing. Detailed information:
+Node path: "Bug001/Body"
+Asset url: "db://assets/_Prefab/Bug/Bug001.prefab"
+Missing uuid: "683ea512-23d5-4111-b3b8-c51fd56f336b"
+
+2020-07-10T16:06:25.802Z - info: 只有预制节点 "Bug001" 及其子节点会被保存。
+2020-07-10T16:06:29.684Z - info: 只有预制节点 "Bug001" 及其子节点会被保存。
+2020-07-10T16:10:51.769Z - info: 只有预制节点 "Bug001" 及其子节点会被保存。
+2020-07-10T16:12:52.351Z - info: 只有预制节点 "Bug001" 及其子节点会被保存。
+2020-07-10T16:13:07.124Z - info: 只有预制节点 "Bug001" 及其子节点会被保存。
