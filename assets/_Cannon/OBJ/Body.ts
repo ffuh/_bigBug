@@ -34,7 +34,8 @@ export default class Body extends OBJ {
         let _edge= other.node.getComponent(Edge);
         if(_edge!=null && this.Owner!=null)
         {
-
+            if(!_edge.AttackyAll &&  !this.Owner.IsEnamy)
+                return ;
             let att = _edge.Attack(this.GetWorldPosition());
             let denf = this.Owner.Denf;
             var dd= denf/(100+denf);

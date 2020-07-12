@@ -20,10 +20,12 @@ export default class Edge extends LiveObj
     ATTMax:number;
     ATT :number;
     Speed:cc.Vec2;
+    AttackyAll:boolean=false;
     
-    Set(_att:number):Edge
+    Set(_att:number,_all:boolean=false):Edge
     {
         this.ATT=this.ATTMax=_att;
+        this.AttackyAll=_all;
         return this;
     }
     SetSpeed(_speed:cc.Vec2):Edge

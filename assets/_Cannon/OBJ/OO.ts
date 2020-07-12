@@ -24,6 +24,9 @@ import LiveObj from "../../__Lib/Base/LiveObj";
         @property
         ATT: number = 900;
 
+        @property 
+        AllAttacky=false;
+
         @property
         DeadStrick: number = 0.05;
 
@@ -65,7 +68,7 @@ import LiveObj from "../../__Lib/Base/LiveObj";
             if(_edge!=null)
             {
                 _edge.node.parent=cc.director.getScene();
-                _edge.Set(this.ATT).SetSpeed(this.Speed).SetWorldPosition(this.GetWorldPosition());
+                _edge.Set(this.ATT,this.AllAttacky).SetSpeed(this.Speed).SetWorldPosition(this.GetWorldPosition());
                 _edge.node.active=true;
             }
 

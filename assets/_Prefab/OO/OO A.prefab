@@ -185,7 +185,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3674714a-0cf9-4bab-98a3-c2a18bf26880"
+      "__uuid__": "8e8f91a9-7861-4834-88f8-cd83e9fdcc95"
     },
     "fileId": "d1TpK3x5JLH6ksffQnGoPc",
     "sync": false
@@ -366,7 +366,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3674714a-0cf9-4bab-98a3-c2a18bf26880"
+      "__uuid__": "8e8f91a9-7861-4834-88f8-cd83e9fdcc95"
     },
     "fileId": "11Sa6Qr6VINpHKymaFsEnU",
     "sync": false
@@ -431,7 +431,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3674714a-0cf9-4bab-98a3-c2a18bf26880"
+      "__uuid__": "8e8f91a9-7861-4834-88f8-cd83e9fdcc95"
     },
     "fileId": "86pUUM+AxNNofvyk50MDD3",
     "sync": false
@@ -446,8 +446,9 @@
     "_enabled": true,
     "DeadAction": 1,
     "AutoLive": true,
-    "label": null,
+    "UponDir": false,
     "ATT": 400,
+    "AllAttacky": true,
     "DeadStrick": 0,
     "Stable": 200,
     "Edge": {
@@ -481,7 +482,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3674714a-0cf9-4bab-98a3-c2a18bf26880"
+      "__uuid__": "8e8f91a9-7861-4834-88f8-cd83e9fdcc95"
     },
     "fileId": "f9Ffk41XNO0I9R0r4eDzZm",
     "sync": false

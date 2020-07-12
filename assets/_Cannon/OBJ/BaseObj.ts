@@ -19,7 +19,9 @@ export default class BaseObj extends LiveObj
     Name: string = 'Name';
     @property
     Desc: string = 'Desc';
-
+    
+    @property
+    IsEnamy=false;
 
     @property
     HP: number =100;
