@@ -18,21 +18,24 @@ export default class UIShooter extends UIOBJ {
     @property(cc.Sprite)
     ICON: cc.Sprite = null;
 
-
+    ShootNum :number;
 
     Shooter:  Shooter ;
     onLoad () 
     {
          this.node.on(cc.Node.EventType.TOUCH_END,this.onSelect,this);
     }
-    Set(sh:  Shooter):UIShooter
+    Set(num,sh:  Shooter):UIShooter
     {
         if(sh==null)
         {
             this.node.active=false; return;
         }
         if(this.Shooter==sh)    return;
+
+        this.ShootNum =num;
         this.Shooter =sh;
+
         if(this.ICON!=null && this.Shooter!=null)
             this.ICON.spriteFrame = this.Shooter.GetICON();
         return this;
@@ -40,7 +43,7 @@ export default class UIShooter extends UIOBJ {
     onSelect()
     {
         if(GM.CANNON!=null)
-            GM.CANNON.UseShootEx(this.Shooter);
+            GM.CANNON.UseShoot(this.ShootNum);
     }
 
  

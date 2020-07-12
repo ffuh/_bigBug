@@ -55,7 +55,7 @@ export default class WinControl extends Win {
             var NN=0;
             this.uiShooters.forEach(ui=>
                 {
-                    ui.Set(GM.CANNON.GetShoot(NN++));
+                    ui.Set(NN,GM.CANNON.GetShoot(NN++));
                 })
         }
 

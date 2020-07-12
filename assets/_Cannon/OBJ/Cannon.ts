@@ -66,24 +66,30 @@ export default class Cannon extends ClockObj {
 
         this._NowShooter = this._Shooters[num];
 
-        return this;
-    }
-    UseShootEx(sh:Shooter):Cannon
-    {
-        if(this._Shooters==null || this._Shooters.length<1)
-        return this;
-
-        this._NowShooter = sh;
-
         if(this.EFF_ShooterUse!=null)
         {
             var eff=  cc.instantiate(this.EFF_ShooterUse);
             eff.setParent(cc.director.getScene());
         }
-            
 
         return this;
     }
+    // UseShootEx(sh:Shooter):Cannon
+    // {
+    //     if(this._Shooters==null || this._Shooters.length<1)
+    //     return this;
+
+    //     this._NowShooter = sh;
+
+    //     if(this.EFF_ShooterUse!=null)
+    //     {
+    //         var eff=  cc.instantiate(this.EFF_ShooterUse);
+    //         eff.setParent(cc.director.getScene());
+    //     }
+            
+
+    //     return this;
+    // }
     GetShoot(num):Shooter
     {
         if(this._Shooters==null || this._Shooters.length<1) return null;
