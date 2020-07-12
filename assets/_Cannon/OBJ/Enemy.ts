@@ -10,6 +10,7 @@ import ClockObj from "./ClockObj";
 import { LiveState } from "../../__Lib/Base/LiveObj";
 import GM from "../GM";
 import Unit from "./Unit";
+import BaseObj from "./BaseObj";
 
 
 
@@ -29,8 +30,10 @@ import Unit from "./Unit";
 
         private __last=0;
         private __passed=0;
+        
         _Eating(dt)
         {
+            
             this._InEating=true;
             this.__passed+=dt;
             if(this.__passed<2)
@@ -40,7 +43,8 @@ import Unit from "./Unit";
 
             this.__passed-=2;
        
-            GM.HOME.BeEated(this.Eatablity);
+            this._NowEatable.Hurt(this.Eatablity);
+
         }
 
         _HomeDist()
@@ -52,13 +56,22 @@ import Unit from "./Unit";
         update (dt) 
         {
             
-
-            if(this._HomeDist()<=60)
+            if(this._NowEatable!=null)
             {
+                if(this._NowEatable.State!= LiveState.osLiving)
+                {
+                    this._NowEatable=null;
+                    return;
+                }
                 this._Eating(dt);
                 return;
             }
             super.update(dt);
+        }
+        _NowEatable:BaseObj
+        AddEat(obj)
+        {
+            this._NowEatable=obj;
         }
     }
 

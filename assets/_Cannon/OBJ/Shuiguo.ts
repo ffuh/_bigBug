@@ -6,19 +6,22 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import BaseObj from "./BaseObj";
-import GM from "../GM";
-import Shuiguo from "./Shuiguo";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Home extends Shuiguo{
+export default class Shuiguo extends BaseObj {
 
-    onLoad()
+    @property(cc.Label)
+    uiHPPoint: cc.Label = null;
+
+    update(dt)
     {
-        GM.HOME=this;
+        super.update(dt);
+
+        if(this.uiHPPoint!=null)
+        {
+            this.uiHPPoint.string = this.NowHP.toFixed(0);
+        }
     }
-
-
-    
 }

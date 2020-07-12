@@ -56,7 +56,7 @@ export default class BaseObj extends LiveObj
 
         _new.parent= cc.director.getScene();
 
-        _new.position=cc.v3( this.GetWorldPositionX(cc.Vec2.UP.mul(200)));
+        _new.position=cc.v3( this.GetWorldPositionX(cc.Vec2.UP.mul(100)));
 
 
         let _label =_new.getComponent(cc.Label);
@@ -108,6 +108,7 @@ export default class BaseObj extends LiveObj
     }
     Hurt(dHP:number):BaseObj
     {
+        if(dHP<1) dHP=1;
         this.NowHP-=dHP;
 
         if(this.NowHP<=0)
@@ -115,6 +116,11 @@ export default class BaseObj extends LiveObj
             this.NowHP=0;
             this.Dead();
         }
+
+        let tip= this.ShowTip(dHP.toFixed(0));
+        if(tip!=null)
+            tip.node.color=cc.Color.RED;
+
         var _log:string="[OBJ Hurt@" +this.NameFull()+"]: ";
 
         console.log( _log+dHP.toFixed(0).toString()   )

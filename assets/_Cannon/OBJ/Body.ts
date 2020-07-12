@@ -16,18 +16,14 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Body extends OBJ {
 
-    @property(cc.Label)
-    label: cc.Label = null;
 
-    @property
-    text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
 
-    _Owner:BaseObj;
+    Owner:BaseObj;
      onLoad () 
     {
-        this._Owner=this.node.parent.getComponent(BaseObj);
+        this.Owner=this.node.parent.getComponent(BaseObj);
     }
 
 
@@ -36,23 +32,22 @@ export default class Body extends OBJ {
         console.log("onCollisionEnter:"+other.node.name+":"+self.node.name);
         
         let _edge= other.node.getComponent(Edge);
-        if(_edge!=null)
+        if(_edge!=null && this.Owner!=null)
         {
 
             let att = _edge.Attack(this.GetWorldPosition());
+            let denf = this.Owner.Denf;
+            var dd= denf/(100+denf);
+            var hp = att*( 1-dd);
 
-            if(this._Owner!=null) 
-                this._Owner.Hurt(att);
+            if(this.Owner!=null) 
+                this.Owner.Hurt(hp);
             //威力
             //let power= 
             console.log("att：" +Math.ceil(att));
 
-            let tip= this._Owner.ShowTip( Math.ceil(att).toString());
 
-            if(tip!=null)
-            tip.node.color=cc.Color.RED;
-        }
-        
+        }       
     }
     // update (dt) {}
 }

@@ -109,14 +109,14 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 0,
       "g": 255,
-      "b": 255,
+      "b": 87,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.87,
+      "width": 48.94,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -128,8 +128,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -191.783,
-        -157.37,
+        528.758,
+        -132.187,
         0,
         0,
         0,
@@ -171,7 +171,7 @@
     "_useOriginalSize": false,
     "_string": "Label",
     "_N$string": "Label",
-    "_fontSize": 40,
+    "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,

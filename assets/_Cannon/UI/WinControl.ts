@@ -37,7 +37,7 @@ export default class WinControl extends Win {
     {
         if(this.Yaw!=null && GM.CANNON!=null)
         {
-            this.Yaw.string=GM.CANNON.Yawing.toString();
+            this.Yaw.string=GM.CANNON.Yawing.toFixed(0);
         }
         if(this.PowerNum!=null && GM.CANNON!=null)
         {
