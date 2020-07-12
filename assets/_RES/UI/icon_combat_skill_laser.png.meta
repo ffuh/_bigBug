@@ -1,6 +1,6 @@
 {
   "ver": "2.3.5",
-  "uuid": "337d473d-98eb-49cf-9894-2350811ab443",
+  "uuid": "ea8a9e4d-33e1-418c-b774-c6825ca584d5",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -22,8 +22,8 @@
   "subMetas": {
     "icon_combat_skill_laser": {
       "ver": "1.0.4",
-      "uuid": "ad97614a-3dfd-408b-9266-a3d80014c1cc",
-      "rawTextureUuid": "337d473d-98eb-49cf-9894-2350811ab443",
+      "uuid": "f128fee4-e783-4537-8c66-da41a662f9b0",
+      "rawTextureUuid": "ea8a9e4d-33e1-418c-b774-c6825ca584d5",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

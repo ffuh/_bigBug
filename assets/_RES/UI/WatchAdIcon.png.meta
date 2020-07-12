@@ -1,6 +1,6 @@
 {
   "ver": "2.3.5",
-  "uuid": "749f19d0-de84-46da-a08e-1ea7c3df5963",
+  "uuid": "afff10b2-530e-4233-aab5-df89ab7de1c1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,8 +13,8 @@
   "subMetas": {
     "WatchAdIcon": {
       "ver": "1.0.4",
-      "uuid": "f4afb399-9cae-40d7-807f-f2c33f707f79",
-      "rawTextureUuid": "749f19d0-de84-46da-a08e-1ea7c3df5963",
+      "uuid": "12ae8096-5acd-4e05-b46e-2edf7d57ebee",
+      "rawTextureUuid": "afff10b2-530e-4233-aab5-df89ab7de1c1",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

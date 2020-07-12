@@ -1,6 +1,6 @@
 {
   "ver": "2.3.5",
-  "uuid": "2dc9c7fd-e298-410f-acad-9d3ae69884ba",
+  "uuid": "d3b4ea80-251b-48e3-8cfe-db0e055b5631",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,8 +13,8 @@
   "subMetas": {
     "icon_combat_skill_Shield": {
       "ver": "1.0.4",
-      "uuid": "a53f2a1c-c30f-42cd-9537-6f53aead9573",
-      "rawTextureUuid": "2dc9c7fd-e298-410f-acad-9d3ae69884ba",
+      "uuid": "72c70f4a-ee97-4278-98c1-91be90216cb8",
+      "rawTextureUuid": "d3b4ea80-251b-48e3-8cfe-db0e055b5631",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

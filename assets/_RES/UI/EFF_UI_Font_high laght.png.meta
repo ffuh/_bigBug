@@ -1,6 +1,6 @@
 {
   "ver": "2.3.5",
-  "uuid": "a049d019-e3f4-44eb-823c-f38c54d1724c",
+  "uuid": "9673c025-7114-424a-b846-adc68fb99360",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,8 +13,8 @@
   "subMetas": {
     "EFF_UI_Font_high laght": {
       "ver": "1.0.4",
-      "uuid": "34daf5b5-9642-42a9-b8bd-edc60b6e054f",
-      "rawTextureUuid": "a049d019-e3f4-44eb-823c-f38c54d1724c",
+      "uuid": "bd5ed8cb-e9f1-443e-a521-8e6bac9508b6",
+      "rawTextureUuid": "9673c025-7114-424a-b846-adc68fb99360",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
