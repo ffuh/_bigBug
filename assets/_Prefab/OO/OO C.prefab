@@ -448,13 +448,11 @@
     "AutoLive": true,
     "UponDir": true,
     "ATT": 400,
+    "AllAttacky": false,
     "DeadStrick": 0,
     "Stable": 200,
     "Edge": {
       "__id__": 5
-    },
-    "ICON": {
-      "__uuid__": "05c44349-b22a-4385-86f3-ebeaa9228c93"
     },
     "Eff_D": {
       "__uuid__": "c3c9bece-ca6b-4085-9496-0d9051d1bbbe"
