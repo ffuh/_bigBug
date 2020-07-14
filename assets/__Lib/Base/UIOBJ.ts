@@ -14,7 +14,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class UIOBJ extends OBJ 
 {
-  
+    IsShowing=false;
     onEnable()
     {
         this.unschedule(this._DoShow);
@@ -30,7 +30,9 @@ export default class UIOBJ extends OBJ
     }
     private _DoShow() 
     {
+        this.node.active=true;
         this.OnShow();
+        this.IsShowing=true;
     }
     OnShow()
     {
@@ -39,8 +41,10 @@ export default class UIOBJ extends OBJ
 
     Close():UIOBJ
     {
-        this.unschedule(this._DoClose);
-        this.scheduleOnce(this._DoClose,0.1);
+        this.IsShowing=false;
+        
+
+        this._DoClose();
     
         return this;
     }

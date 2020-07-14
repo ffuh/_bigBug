@@ -49,6 +49,13 @@ export default class BaseObj extends LiveObj
 
     NameFull():string{return this.NameUDD()+"_HP("+this.NowHP.toFixed(0).toString()+")"}
     HPrecent():number{return this.HP<=0?0: this.NowHP/this.HP; }
+
+
+    Pausing(){ return false; }
+
+
+
+
     ShowTip(_tip:string):cc.Label
     {
         if(this.MOD_Tip==null)

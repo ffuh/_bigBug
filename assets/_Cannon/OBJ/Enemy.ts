@@ -30,10 +30,13 @@ import BaseObj from "./BaseObj";
 
         private __last=0;
         private __passed=0;
+
+        Pausing(){return GM.INCONTROLING;}
         
         _Eating(dt)
         {
-            
+            if(this.Pausing())return;
+
             this._InEating=true;
             this.__passed+=dt;
             if(this.__passed<2)
@@ -55,6 +58,7 @@ import BaseObj from "./BaseObj";
 
         update (dt) 
         {
+            if(this.Pausing())return;
             
             if(this._NowEatable!=null)
             {

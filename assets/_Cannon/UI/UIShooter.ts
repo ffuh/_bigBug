@@ -15,15 +15,29 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class UIShooter extends UIOBJ {
 
+    @property (cc.Color)
+    ColorSelect:cc.Color;
+    @property (cc.Color)
+    ColorUnSelect:cc.Color;
+
+    
+    @property(cc.Node)
+    ForAnim: cc.Node = null;
+
+
+
     @property(cc.Sprite)
     ICON: cc.Sprite = null;
+    @property(cc.Label)
+    NAME: cc.Label = null;
 
     ShootNum :number;
 
     Shooter:  Shooter ;
     onLoad () 
     {
-         this.node.on(cc.Node.EventType.TOUCH_END,this.onSelect,this);
+         this.node.on(cc.Node.EventType.TOUCH_END,this.Select,this);
+         this.UnSelect();
     }
     Set(num,sh:  Shooter):UIShooter
     {
@@ -38,12 +52,31 @@ export default class UIShooter extends UIOBJ {
 
         if(this.ICON!=null && this.Shooter!=null)
             this.ICON.spriteFrame = this.Shooter.GetICON();
+
+        if(this.NAME!=null && this.Shooter!=null)
+            this.NAME.string = this.Shooter.MOD.name;
+
         return this;
     }
-    onSelect()
+    Select():UIShooter
     {
-        if(GM.CANNON!=null)
-            GM.CANNON.UseShoot(this.ShootNum);
+        this._ONSelect?.call(this,this);
+        this.node.color= this.ColorSelect;
+        if(this.ForAnim!=null) this.ForAnim.runAction(cc.scaleTo(0.1,1.1,1.1));
+        return this;
+    }
+    UnSelect():UIShooter
+    {
+        this.node.color= this.ColorUnSelect;
+        if(this.ForAnim!=null) this.ForAnim.runAction(cc.scaleTo(0.1,1,1));
+        return this;
+    }
+
+    _ONSelect:Function;
+    WaitSelect(on:(UIShooter)=>void):UIShooter
+    {   
+        this._ONSelect = on;
+        return this;
     }
 
  

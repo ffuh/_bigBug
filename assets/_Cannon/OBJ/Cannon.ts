@@ -9,12 +9,13 @@ import OO from "./OO";
 import GM from "../GM";
 import ClockObj from "./ClockObj";
 import Shooter from "./Shooter/Shooter";
+import WaitingObj from "./WaitingObj";
 
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Cannon extends ClockObj {
+export default class Cannon extends WaitingObj {
 
 
 
@@ -47,14 +48,14 @@ export default class Cannon extends ClockObj {
     onLoad ()
     {
         this.Name="MY";
-        
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
-
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-
         this._Shooters=this.getComponentsInChildren(Shooter);
 
         GM.CANNON=this;
+    }
+    Begin():Cannon
+    {
+        this.AddWaiting(4);
+        return this;
     }
 
     UseShoot(num):Cannon
@@ -91,49 +92,26 @@ export default class Cannon extends ClockObj {
 
         let _speed = new cc.Vec2(Math.cos(this.Yawing*3.14/180),Math.sin(this.Yawing*3.14/180)).mul(this.Powering*this.PowerBase);
 
-        this._NowShooter.Shoot(_speed);
+        var oo= this._NowShooter.Shoot(_speed);
 
         this.AddWaiting(this._NowShooter.CD);
+
+        this.__OnShoot(oo);
         
         return ;
     }
-    AddWaiting(wt)
+    private __OnShoot(oo)
     {
-        this._Waiting+=wt;
-        this._WaitingMax=this._Waiting;
+        this._ONShoot?.call(this,oo);
     }
-    WaitPercemt(){return this._WaitingMax<=0?0:  this._Waiting/ this._WaitingMax;    }
 
-    onKeyUp (event) 
-    {        
-        switch(event.keyCode)
-        {            
-            case cc.macro.KEY.a:         
-                   this.Shoot()
-       
-                      break;    
-            case cc.macro.KEY.space:
-                if(this._Powering) 
-                    this.PowerEnd()   ;
-                    break;      
-        }    
+    _ONShoot:Function;
+    WaitShoot(on :(oo:OO)=>void)
+    {
+        this._ONShoot=on;return this;
     }
-    onKeyDown (event) 
-    {        
-        switch(event.keyCode)
-        {            
-            case cc.macro.KEY.up:         
-                   this.YawAdd(1)  
-                      break;   
-            case cc.macro.KEY.down:         
-                this.YawAdd(-1)  
-                    break;   
-            case cc.macro.KEY.space:
-                if(!this._Powering) 
-                    this.PowerBegin()   ;
-                 break;    
-        }    
-    }  
+
+  
     SetYaw(_yaw:number)
     {
         this.Yawing=_yaw;
@@ -152,38 +130,23 @@ export default class Cannon extends ClockObj {
         if(this.Yawing<this.ShootYawMin)
             this.Yawing=this.ShootYawMin;
     }
-    _Powering=false;
-    PowerBegin()
-    {
-        this.Powering=0;
-        this._Powering=true;
-    }
-    PowerEnd()
-    {
-        this._Powering=false;
 
-        this.Shoot();
+
+    SetPowerFill(fill):Cannon
+    {
+        this.Powering = 100*fill;
+        return this;
     }
 
     update(dt)
     {
         super.update(dt);
-        if(this._Powering)
-        {
-            this.Powering+= dt*this.PowerSpeed;
-            if(this.Powering>100)
-                this.Powering=100;
-        }
-
-        if(this._Waiting>0)
-            this._Waiting-=dt;
     }
 
     FireCDing()
     {
         if(this._NowShooter==null) this.UseShoot(0);
         if(this._NowShooter==null) return 1;
-
         return this._NowShooter.CDing();
     }
 }

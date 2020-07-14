@@ -27,7 +27,7 @@ export default class OBJ extends cc.Component
  
     NameUDD():string{return  this.node.name+"["+this.UDD.toString()+"]"; }
 
-    GetWorldPosition():cc.Vec2{return this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);}
+    GetWorldPosition():cc.Vec2 {return this.node.convertToWorldSpaceAR<cc.Vec2>(cc.Vec2.ZERO);}
     GetWorldPositionX(dpos:cc.Vec2):cc.Vec2 {     return this.node.convertToWorldSpaceAR(dpos);  }
   
     SetWorldPosition(pos:cc.Vec2):OBJ

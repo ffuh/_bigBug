@@ -15,6 +15,7 @@ import WinControl from "./UI/WinControl";
 import UILevelWind from "./Level/UILevelWind";
 import Home from "./OBJ/Home";
 import Win from "../__Lib/Base/Win";
+import Follow from "../__Lib/Base/Follow";
 
 const {ccclass, property} = cc._decorator;
 
@@ -22,8 +23,8 @@ const {ccclass, property} = cc._decorator;
 export default class GM extends cc.Component 
 {
 
-    @property(cc.Label)
-    label: cc.Label = null;
+    @property(Follow)
+    MainCamera: Follow = null;
 
     @property
     text: string = 'hello';
@@ -42,12 +43,15 @@ export default class GM extends cc.Component
     @property (cc.Prefab)
     Mod_WinFaild:Win=null;
 
+    static  CAMERA:Follow;
     static  LEVEL: Level = null;
     static  CANNON: Cannon = null;
     static  HOME   :Home=null;
     static G =500;
     static W =0;
     static  WA_MAX =1000;
+    static CONTROLTIME=15;
+    static INCONTROLING=false;
     
     static WA(stable:number,hy:number):cc.Vec2
     {
@@ -62,6 +66,8 @@ export default class GM extends cc.Component
     {
         GM.G=-500;
 
+        GM.CAMERA=this.MainCamera;
+
         cc.director.getCollisionManager().enabled = true; //开启碰撞检测，默认为关闭
         cc.director.getCollisionManager().enabledDebugDraw = true; //开启碰撞检测范围的绘制
         cc.director.getCollisionManager().enabledDrawBoundingBox = true; //开启碰撞组件的包围盒绘制
@@ -72,7 +78,7 @@ export default class GM extends cc.Component
       
         this.schedule(this._Init,0.3);
     }
-
+    _Win_Control :WinControl;
     _Init()
     {
         if(GM.LEVEL==null || GM.CANNON==null|| GM.HOME==null)   
@@ -82,19 +88,49 @@ export default class GM extends cc.Component
         this.unscheduleAllCallbacks();
 
         UI.CreateWindow<WinLevel>(this.Mod_WinLevel);
-        UI.CreateWindow<WinControl>(this.Mod_WinControl);
+        
         UI.CreateWindow<UILevelWind>(this.Mod_Wind);
+
+        this._Win_Control= UI.CreateWindow<WinControl>(this.Mod_WinControl)?.getComponent(WinControl);
+        this._Win_Control?.Close();
+
         
         GM.LEVEL.Begin().WaitEnd(result=>
             {
                 this._DoSuccess(result);
             });
+
+        GM.CANNON.Begin().WaitShoot(oo=>
+            {
+               if(oo!=null)
+               {
+                    GM.CAMERA?.Follow(oo);
+               }     
+
+            }).WaitWaiting(w=>
+            {
+                this._DoEnemyTime();
+
+            }).WaitWaitingOver(w=>
+            {
+                this._DoPlayTime();
+            });    
         
         GM.HOME.WaitDead(w=>
             {
                 this._DoFaild();
             });
 
+    }
+    _DoPlayTime()
+    {
+        GM.INCONTROLING=true;
+        this._Win_Control.Show();
+        GM.CAMERA?.PosTo(GM.CANNON.GetWorldPosition().add(cc.v2(0,-500)));
+    }
+    _DoEnemyTime()
+    {
+        GM.INCONTROLING=false;
     }
 
     _DoSuccess(f)

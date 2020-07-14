@@ -28,7 +28,7 @@ export default class UI extends cc.Component {
     {
         if(mod==null)      return null;
 
-        var _ob=  cc.instantiate(mod);
+        var  _ob=  cc.instantiate<T>(mod);
         _ob.setParent(UI._Instance==null?cc.director.getScene():  UI._Instance.Root);
 
         return _ob ;
