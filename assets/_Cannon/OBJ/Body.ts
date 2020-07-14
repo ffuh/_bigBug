@@ -24,6 +24,7 @@ export default class Body extends OBJ {
      onLoad () 
     {
         this.Owner=this.node.parent.getComponent(BaseObj);
+        this.node.position
     }
 
 

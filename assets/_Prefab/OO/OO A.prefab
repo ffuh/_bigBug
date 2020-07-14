@@ -447,7 +447,7 @@
     "DeadAction": 1,
     "AutoLive": true,
     "UponDir": false,
-    "ATT": 400,
+    "ATT": 4000,
     "AllAttacky": true,
     "DeadStrick": 0,
     "Stable": 200,

@@ -30,6 +30,7 @@ export default class GM extends cc.Component
 
     @property (cc.Prefab)
     Mod_WinLevel:WinLevel=null;
+    
     @property (cc.Prefab)
     Mod_WinControl:WinControl=null;
 

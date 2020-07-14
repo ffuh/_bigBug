@@ -1039,12 +1039,12 @@
     "_enabled": true,
     "DeadAction": 1,
     "AutoLive": true,
-    "Name": "蟑螂",
+    "Name": "小强",
     "Desc": "Desc",
     "IsEnamy": true,
     "HP": 1200,
     "Denf": 0,
-    "Speed": 20,
+    "Speed": 100,
     "uiName": {
       "__id__": 13
     },
@@ -1063,9 +1063,9 @@
     "uiMovingCD": {
       "__id__": 18
     },
-    "MoveLife": 5,
-    "MoveWait": 1,
-    "Eatablity": 1,
+    "MoveLife": 1,
+    "MoveWait": 5,
+    "Eatablity": 5,
     "_id": ""
   },
   {

@@ -193,7 +193,7 @@
     "DeadAction": 1,
     "Life": -1,
     "Delay": 0,
-    "Speed": 90,
+    "Speed": 280,
     "_id": ""
   },
   {
@@ -465,6 +465,7 @@
     "AutoLive": true,
     "UponDir": false,
     "ATT": 400,
+    "AllAttacky": false,
     "DeadStrick": 0,
     "Stable": 200,
     "Edge": {

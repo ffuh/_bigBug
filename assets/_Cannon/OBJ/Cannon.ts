@@ -145,6 +145,8 @@ export default class Cannon extends ClockObj {
     YawAdd(_dd:number)
     {
         this.Yawing+=_dd;
+
+     
         if(this.Yawing>this.ShootYawMax)
             this.Yawing=this.ShootYawMax;
         if(this.Yawing<this.ShootYawMin)

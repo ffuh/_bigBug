@@ -91,7 +91,7 @@
     "_mute": false,
     "_loop": false,
     "playOnLoad": true,
-    "preload": false,
+    "preload": true,
     "_id": ""
   },
   {
@@ -102,9 +102,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "DeadAction": 0,
     "Life": 1,
     "Delay": 0,
-    "DeadAction": 0,
     "_id": ""
   },
   {
@@ -113,7 +113,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "c3c9bece-ca6b-4085-9496-0d9051d1bbbe"
     },
     "fileId": "48Zj0E1xtHw4DcxU4Rr4/v",
     "sync": false
