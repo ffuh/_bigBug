@@ -34,12 +34,12 @@ export default class UIPowerButton extends cc.Component {
     {
         if(GM.CANNON==null || GM.CANNON.WaitPercemt()>0) return;
 
-        GM.CANNON.PowerBegin();
+ 
     }
     onMouseUp()
     {
         if(GM.CANNON==null || GM.CANNON.WaitPercemt()>0) return;
-        GM.CANNON.PowerEnd();
+
     }
     update (dt)
     {

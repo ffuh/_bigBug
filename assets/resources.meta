@@ -4,9 +4,21 @@
   "isBundle": true,
   "bundleName": "resources",
   "priority": 8,
-  "compressionType": {},
-  "optimizeHotUpdate": {},
-  "inlineSpriteFrames": {},
-  "isRemoteBundle": {},
+  "compressionType": {
+    "web-mobile": "default",
+    "wechatgame": "default"
+  },
+  "optimizeHotUpdate": {
+    "web-mobile": false,
+    "wechatgame": false
+  },
+  "inlineSpriteFrames": {
+    "web-mobile": false,
+    "wechatgame": false
+  },
+  "isRemoteBundle": {
+    "web-mobile": false,
+    "wechatgame": false
+  },
   "subMetas": {}
 }
