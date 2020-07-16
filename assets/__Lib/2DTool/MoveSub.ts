@@ -11,7 +11,7 @@ const {ccclass, property} = cc._decorator;
 export default class MoveSub extends cc.Component {
 
     @property
-    SpeedFactor:number = 1;
+    SpeedFactor:cc.Vec2=new cc.Vec2(1,1);
 
 
 
@@ -21,7 +21,7 @@ export default class MoveSub extends cc.Component {
 
     DoMove(pos:cc.Vec2)
     {
-        this.node.position=  this.node.position.add( cc.v3(  pos.mul(this.SpeedFactor)));
+        this.node.position=  this.node.position.add( cc.v3(  pos.x*(this.SpeedFactor.x),pos.y*this.SpeedFactor.y));
     }
 
     // update (dt) {}
