@@ -2,7 +2,7 @@
   "appid": "wxf292b1105f0e80f1",
   "orientation": "landscape",
   "separate_engine": false,
-  "REMOTE_SERVER_ROOT": "https://game.ice909.com",
+  "REMOTE_SERVER_ROOT": "https://game.ice909.com/",
   "subContext": "",
   "startSceneAssetBundle": false
 }

@@ -43,6 +43,9 @@ export default class GM extends cc.Component
     @property (cc.Prefab)
     Mod_WinFaild:Win=null;
 
+    @property (cc.Prefab)
+    Mod_EFF_BGM:cc.Node=null;
+
     static  CAMERA:Follow;
     static  LEVEL: Level = null;
     static  CANNON: Cannon = null;
@@ -120,6 +123,12 @@ export default class GM extends cc.Component
             {
                 this._DoFaild();
             });
+
+        if(this.Mod_EFF_BGM!=null)
+        {
+            cc.instantiate(this.Mod_EFF_BGM).setParent(cc.director.getScene());
+        }
+
 
     }
     _DoPlayTime()
