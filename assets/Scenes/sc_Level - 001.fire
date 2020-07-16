@@ -201,7 +201,7 @@
       "array": [
         0,
         -172.00000000000003,
-        573.8386522105164,
+        519.6152422706632,
         0,
         0,
         0,
@@ -247,9 +247,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 190,
+      "g": 208,
+      "b": 138,
       "a": 255
     },
     "_contentSize": {
@@ -1218,7 +1218,7 @@
   {
     "__type__": "cc.Node",
     "_name": "LEVEL",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 2
     },
@@ -1346,7 +1346,7 @@
       "ctor": "Float64Array",
       "array": [
         361,
-        80.704,
+        106.16,
         0,
         0,
         0,
@@ -1521,7 +1521,7 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -82
+      "y": -70
     },
     "_size": {
       "__type__": "cc.Size",
@@ -1789,7 +1789,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Cannon",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 36
     },
@@ -2262,7 +2262,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        60.288,
+        46.433,
         0,
         0,
         0,
@@ -2301,7 +2301,9 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_spriteFrame": null,
+    "_spriteFrame": {
+      "__uuid__": "eb1b56bc-5c33-4b46-bff7-9d42f5b72bbb"
+    },
     "_type": 0,
     "_sizeMode": 0,
     "_fillType": 0,
@@ -3466,7 +3468,7 @@
   {
     "__type__": "cc.Node",
     "_name": "UI",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 2
     },
@@ -3574,7 +3576,7 @@
       "array": [
         0,
         0,
-        573.8386522105164,
+        519.6152422706632,
         0,
         0,
         0,

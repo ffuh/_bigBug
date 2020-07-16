@@ -112,7 +112,7 @@ export default class WinControl extends Win {
             var ttt= this.__Couting.toFixed(0);
             if(ttt!=this.Couting.string && this.EFF_Counting!=null)
             {
-                this.EFF_Counting.active=true;//this.__Couting<5;
+                this.EFF_Counting.active=this.__Couting<5;
                 var fss = this.__Couting<5?1:0.6;
                 this.Couting.node.setScale(0,0,0);           
                 this.Couting.node.runAction(cc.scaleTo(0.2,fss,fss).easing(cc.easeSineIn()));

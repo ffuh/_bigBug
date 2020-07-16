@@ -29,9 +29,6 @@ export default class CSBase extends OBJ {
 
 
     Living:boolean=false;
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
 
     start () 
     {
@@ -43,7 +40,7 @@ export default class CSBase extends OBJ {
 
         this.OnWake();
         if(this.Delay>0)
-            this.schedule(this._Live,this.Delay);
+            this.scheduleOnce(this._Live,this.Delay);
         else
             this._Live();
     }

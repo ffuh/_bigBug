@@ -180,7 +180,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "7euZEjVgVOD7QF2cftGw4w",
     "sync": false
@@ -273,7 +273,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "29K3q9KDdAqYU1icmVnNze",
     "sync": false
@@ -366,7 +366,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "17vdX0OBVDQ6YHPveu2C/F",
     "sync": false
@@ -437,7 +437,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "a2aRLboJpKxK2KZgmIGArV",
     "sync": false
@@ -525,7 +525,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "52527b87-70c7-4a75-a1c4-df2a3bcfb3c5"
+      "__uuid__": "eb1b56bc-5c33-4b46-bff7-9d42f5b72bbb"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -550,8 +550,6 @@
     },
     "_enabled": true,
     "DeadAction": 1,
-    "label": null,
-    "text": "hello",
     "_id": ""
   },
   {
@@ -560,7 +558,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "965A2TSMFJ5asWp9baKe/5",
     "sync": false
@@ -738,7 +736,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "60YduoXEtECIKvl44yW7tX",
     "sync": false
@@ -909,7 +907,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "8dky4ZXTRIrJq8Thi4sPDk",
     "sync": false
@@ -920,7 +918,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "4aDPUJ6E5EQLhbdxar68D2",
     "sync": false
@@ -945,7 +943,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "d4NSZC7tZLgKtUM0pOf85m",
     "sync": false
@@ -962,6 +960,7 @@
     "AutoLive": true,
     "Name": "Name",
     "Desc": "Desc",
+    "IsEnamy": false,
     "HP": 100,
     "Denf": 0,
     "Speed": 50,
@@ -970,11 +969,6 @@
     "MOD_Tip": null,
     "MOD_Info": {
       "__uuid__": "6f69373a-ffbd-44b9-9c73-777239915ff5"
-    },
-    "TurnLife": 15,
-    "Waitime": 3,
-    "MOD_TurnTip": {
-      "__uuid__": "e8f95ef1-5ccb-4d0a-9493-a3e8149e0f7c"
     },
     "ShootYawMin": 20,
     "ShootYawMax": 65,
@@ -992,7 +986,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "b4fffe7e-b452-48d4-98d0-8b7983e8c9e6"
     },
     "fileId": "d4n62Gh/xLRpcaJoDEpan8",
     "sync": false

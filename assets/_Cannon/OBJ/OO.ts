@@ -73,13 +73,7 @@ import LiveObj from "../../__Lib/Base/LiveObj";
             }
 
 
-            if(this.Eff_D!=null)
-            {
-                var eff=cc.instantiate(this.Eff_D);
-                eff.setParent(cc.director.getScene());
 
-                eff.position=cc.v3( this.GetWorldPosition());
-            }
 
             return this;
         }
@@ -125,7 +119,15 @@ import LiveObj from "../../__Lib/Base/LiveObj";
         {
             console.log("OO.onCollisionEnter:"+other.node.name+":"+self.node.name);
             
-            this.Dead();
+            this.scheduleOnce(this.Dead,this.DeadStrick);
+
+            if(this.Eff_D!=null)
+            {
+                var eff=cc.instantiate(this.Eff_D);
+                eff.setParent(cc.director.getScene());
+
+                eff.position=cc.v3( this.GetWorldPosition());
+            }
         }
     }   
 

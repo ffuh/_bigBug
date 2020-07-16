@@ -72,8 +72,8 @@ export default class GM extends cc.Component
         GM.CAMERA=this.MainCamera;
 
         cc.director.getCollisionManager().enabled = true; //开启碰撞检测，默认为关闭
-        cc.director.getCollisionManager().enabledDebugDraw = true; //开启碰撞检测范围的绘制
-        cc.director.getCollisionManager().enabledDrawBoundingBox = true; //开启碰撞组件的包围盒绘制
+        //cc.director.getCollisionManager().enabledDebugDraw = true; //开启碰撞检测范围的绘制
+        //cc.director.getCollisionManager().enabledDrawBoundingBox = true; //开启碰撞组件的包围盒绘制
     }
 
     start () 

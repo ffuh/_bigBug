@@ -29,8 +29,6 @@ export default class CSPos extends CSTween {
     OnLive()
     {
         super.OnLive();
-
-
         this.node.runAction(cc.moveTo(this.Life,this.TO));
     }
 }
