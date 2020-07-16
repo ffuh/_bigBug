@@ -3,7 +3,7 @@
   "packageName": "org.cocos2d.demo",
   "startScene": "dd5c42cf-8cc7-4064-92c3-dfb677204be2",
   "excludeScenes": [
-    "a96953aa-ad9e-4bf9-b186-ba164f4cc3e6"
+    "ff6d3c29-d5ee-40f0-95ef-06e3d7cac615"
   ],
   "includeSDKBox": false,
   "orientation": {
@@ -52,7 +52,7 @@
   },
   "appBundle": false,
   "mainCompressionType": "default",
-  "mainIsRemote": false,
+  "mainIsRemote": true,
   "nativeMd5Cache": true,
   "includeAnySDK": null
 }
