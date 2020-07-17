@@ -46,6 +46,7 @@ export default class GM extends cc.Component
     @property (cc.Prefab)
     Mod_EFF_BGM:cc.Node=null;
 
+    static GAMENAME="BigBug";
     static  CAMERA:Follow;
     static  LEVEL: Level = null;
     static  CANNON: Cannon = null;

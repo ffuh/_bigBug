@@ -5,38 +5,35 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import ACC from "./ACC";
+import ACC from "../ACC";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class GM_intro extends cc.Component {
+export default class NewClass extends cc.Component {
 
     @property(cc.Label)
-    label: cc.Label = null;
+    uiGold: cc.Label = null;
 
     @property
     text: string = 'hello';
 
-    // LIFE-CYCLE CALLBACKS:
 
-    onLoad () 
-    {
-        this.node.on(cc.Node.EventType.TOUCH_END, this.GOGOGOG, this);
-    }
-    GOGOGOG()
-    {
-        cc.director.loadScene("sc_Level - 001");
-    }
+
     start () 
     {
-       this.scheduleOnce(this._Check,1);
+
     }
-
-    _Check()
+    _passed =0;
+    update (dt) 
     {
-        if(!ACC.LOADOK)    return;
-
-        this.GOGOGOG();
+        this._passed+=dt;
+        if(this._passed<0.5)    return;
+        this._passed=0;
+        
+        if(this.uiGold!=null && ACC.SAVING!=null)
+        {
+            this.uiGold.string =ACC.SAVING.Gold.toString();
+        }
     }
 }

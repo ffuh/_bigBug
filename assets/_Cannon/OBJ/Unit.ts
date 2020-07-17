@@ -63,7 +63,7 @@ export default class Unit extends BaseObj
         this.UnitState= UnitState.usIdea;
         this._MovingWaiting =this.MoveWait;
         this.AM?.clearTrack(0);
-        this.AM?.setAnimation(0,"idle",true);
+        this.AM?.setAnimation(0,"Idle",true);
     }
     Move()
     {
@@ -73,7 +73,7 @@ export default class Unit extends BaseObj
         this.UnitState= UnitState.usMoving; 
         this._MovingLife =this.MoveLife;
         this.AM?.clearTrack(0);
-        this.AM?.setAnimation(0,"walk",true);
+        this.AM?.setAnimation(0,"Walk",true);
     }
 
 
