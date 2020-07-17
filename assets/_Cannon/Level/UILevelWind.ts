@@ -31,5 +31,9 @@ export default class UILevelWind extends UIOBJ {
         if(GM.LEVEL==null) return;
 
         this.WindProgress.fillRange = GM.LEVEL.Winding()/20;
+        var c=this.WindProgress.node.color;
+        this.WindProgress.node.color =cc.Color.lerp(c,cc.Color.YELLOW,cc.Color.RED,this.WindProgress.fillRange) ;
+        //    this.WindProgress.fillRange<0.3? cc.Color.YELLOW:
+         //   (this.WindProgress.fillRange<0.7?cc.Color.ORANGE:cc.Color.RED);
     }
 }

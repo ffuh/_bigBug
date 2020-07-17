@@ -128,7 +128,7 @@ export default class BaseObj extends LiveObj
 
         let tip= this.ShowTip(dHP.toFixed(0));
         if(tip!=null)
-            tip.node.color=cc.Color.RED;
+            tip.node.color=this.IsEnamy?cc.Color.ORANGE:cc.Color.RED;
 
         var _log:string="[OBJ Hurt@" +this.NameFull()+"]: ";
 

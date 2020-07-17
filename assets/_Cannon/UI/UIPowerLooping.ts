@@ -87,12 +87,12 @@ export default class UIPowerLooping extends UIOBJ {
 
         if(this.MARK_MIN!=null)
         {
-            this.MARK_MIN.node.x =(min-0.5)* 500;
+            this.MARK_MIN.node.x =(min-0.5)* 300;
         }
 
         if(this.MARK_MAX!=null)
         {
-            this.MARK_MAX.node.x = (max-0.5)*500;
+            this.MARK_MAX.node.x = (max-0.5)*300;
         }
 
 

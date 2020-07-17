@@ -20,7 +20,9 @@ export default class UIShooter extends UIOBJ {
     @property (cc.Color)
     ColorUnSelect:cc.Color;
 
-    
+    @property(cc.Node)
+    BOUND: cc.Node = null;
+
     @property(cc.Node)
     ForAnim: cc.Node = null;
 
@@ -61,14 +63,14 @@ export default class UIShooter extends UIOBJ {
     Select():UIShooter
     {
         this._ONSelect?.call(this,this);
-        this.node.color= this.ColorSelect;
-        if(this.ForAnim!=null) this.ForAnim.runAction(cc.scaleTo(0.1,1.1,1.1));
+        if(this.BOUND!=null)this.BOUND.color= this.ColorSelect;
+        if(this.ForAnim!=null) this.ForAnim.runAction(cc.scaleTo(0.1,1.0,1.0));
         return this;
     }
     UnSelect():UIShooter
     {
-        this.node.color= this.ColorUnSelect;
-        if(this.ForAnim!=null) this.ForAnim.runAction(cc.scaleTo(0.1,1,1));
+        if(this.BOUND!=null)this.BOUND.color= this.ColorUnSelect;
+        if(this.ForAnim!=null) this.ForAnim.runAction(cc.scaleTo(0.1,.8,.8));
         return this;
     }
 
