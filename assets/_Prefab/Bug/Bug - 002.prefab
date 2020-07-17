@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Bug001",
+    "_name": "Bug - 002",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -71,8 +71,8 @@
         0,
         0,
         1,
-        0.6,
-        0.6,
+        1,
+        1,
         1
       ]
     },
@@ -1067,7 +1067,7 @@
     "IsEnamy": true,
     "HP": 1200,
     "Denf": 0,
-    "Speed": 20,
+    "Speed": 35,
     "uiName": {
       "__id__": 13
     },

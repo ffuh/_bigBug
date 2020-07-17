@@ -174,7 +174,7 @@
     ],
     "paused": false,
     "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultAnimation": "Idle",
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "loop": true,
@@ -185,7 +185,7 @@
     "_frameCache": null,
     "_curFrame": null,
     "_skeletonCache": null,
-    "_animationName": "",
+    "_animationName": "Idle",
     "_animationQueue": [],
     "_headAniInfo": null,
     "_playTimes": 0,
@@ -1044,7 +1044,7 @@
     "IsEnamy": true,
     "HP": 1200,
     "Denf": 0,
-    "Speed": 100,
+    "Speed": 5,
     "uiName": {
       "__id__": 13
     },
@@ -1063,7 +1063,7 @@
     "uiMovingCD": {
       "__id__": 18
     },
-    "MoveLife": 1,
+    "MoveLife": 10,
     "MoveWait": 5,
     "Eatablity": 5,
     "_id": ""
