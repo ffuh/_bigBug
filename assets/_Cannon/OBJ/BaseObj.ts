@@ -67,6 +67,7 @@ export default class BaseObj extends LiveObj
 
         _new.position=cc.v3( this.GetWorldPositionX(cc.Vec2.UP.mul(100)));
 
+        if(_new != null && !this.IsEnamy) _tip="-"+_tip;
 
         let _label =_new.getComponent(cc.Label);
 
@@ -128,7 +129,7 @@ export default class BaseObj extends LiveObj
 
         let tip= this.ShowTip(dHP.toFixed(0));
         if(tip!=null)
-            tip.node.color=this.IsEnamy?cc.Color.ORANGE:cc.Color.RED;
+            tip.node.color=this.IsEnamy?cc.Color.ORANGE:cc.Color.GREEN;
 
         var _log:string="[OBJ Hurt@" +this.NameFull()+"]: ";
 

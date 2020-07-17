@@ -361,7 +361,7 @@
         "__id__": 12
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": {
       "__id__": 15
@@ -434,13 +434,13 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 117,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
+      "width": 80,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -459,8 +459,8 @@
         0,
         0,
         1,
-        1,
-        1,
+        0.5,
+        0.5,
         1
       ]
     },
@@ -495,7 +495,7 @@
     "_useOriginalSize": false,
     "_string": "小强",
     "_N$string": "小强",
-    "_fontSize": 20,
+    "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
@@ -624,9 +624,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 9,
-      "g": 230,
-      "b": 255,
+      "r": 255,
+      "g": 240,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
@@ -802,7 +802,7 @@
     "_prefab": {
       "__id__": 29
     },
-    "_opacity": 178,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -873,7 +873,7 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 0,
+      "g": 147,
       "b": 0,
       "a": 255
     },
@@ -1042,7 +1042,7 @@
     "Name": "小强",
     "Desc": "Desc",
     "IsEnamy": true,
-    "HP": 1200,
+    "HP": 800,
     "Denf": 0,
     "Speed": 20,
     "uiName": {
@@ -1052,7 +1052,7 @@
       "__id__": 25
     },
     "MOD_Tip": {
-      "__uuid__": "51ffb10d-4f78-42e8-8715-3c14754e812a"
+      "__uuid__": "ef641a8f-e9de-4245-ba69-6eac6ad16221"
     },
     "MOD_Info": {
       "__uuid__": "6f69373a-ffbd-44b9-9c73-777239915ff5"
@@ -1065,7 +1065,7 @@
     },
     "MoveLife": 5,
     "MoveWait": 5,
-    "Eatablity": 5,
+    "Eatablity": 2,
     "_id": ""
   },
   {
