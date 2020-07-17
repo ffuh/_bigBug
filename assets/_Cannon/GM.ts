@@ -123,6 +123,7 @@ export default class GM extends cc.Component
         GM.HOME.WaitDead(w=>
             {
                 this._DoFaild();
+
             });
 
         if(this.Mod_EFF_BGM!=null)
@@ -148,7 +149,7 @@ export default class GM extends cc.Component
         if(this.Mod_WinSuccess!=null)
         {
             var win = UI.CreateWindow<WinSuccess>(this.Mod_WinSuccess);
-
+            this.Mod_WinFaild=null;
             if(win!=null && win.getComponent(WinSuccess)!=null)
                 win.getComponent(WinSuccess)?.Set(f).WaitMsg((w,m)=>
                     {
@@ -164,7 +165,7 @@ export default class GM extends cc.Component
         if(this.Mod_WinFaild!=null)
         {
             var win = UI.CreateWindow<Win>(this.Mod_WinFaild);
-
+            this.Mod_WinSuccess=null;
             if(win!=null && win.getComponent(Win)!=null)
                 win.getComponent(Win)?.WaitMsg((w,m)=>
                     {

@@ -52,7 +52,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -219.517,
+        -385,
         0,
         0,
         0,
@@ -149,7 +149,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "Body<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 2

@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Bug001",
+    "_name": "Bug - 002",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -71,8 +71,8 @@
         0,
         0,
         1,
-        0.6,
-        0.6,
+        1,
+        1,
         1
       ]
     },
@@ -282,8 +282,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
-        43.602,
+        -4.353,
+        44.183,
         0,
         0,
         0,
@@ -361,7 +361,7 @@
         "__id__": 12
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": {
       "__id__": 16
@@ -587,8 +587,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 10
+      "width": 70,
+      "height": 4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -600,7 +600,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        104.264,
+        106.577,
         0,
         0,
         0,
@@ -654,8 +654,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 96,
-      "height": 8
+      "width": 66,
+      "height": 2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -835,8 +835,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 10
+      "width": 70,
+      "height": 8
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -902,8 +902,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 96,
-      "height": 8
+      "width": 66,
+      "height": 6
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1062,12 +1062,12 @@
     "_enabled": true,
     "DeadAction": 1,
     "AutoLive": true,
-    "Name": "xiao蟑螂",
+    "Name": "老小强",
     "Desc": "Desc",
     "IsEnamy": true,
-    "HP": 1200,
+    "HP": 750,
     "Denf": 0,
-    "Speed": 20,
+    "Speed": 35,
     "uiName": {
       "__id__": 13
     },
@@ -1086,8 +1086,8 @@
     "uiMovingCD": {
       "__id__": 19
     },
-    "MoveLife": 2,
-    "MoveWait": 5,
+    "MoveLife": 1,
+    "MoveWait": 2,
     "Eatablity": 1,
     "_id": ""
   },
