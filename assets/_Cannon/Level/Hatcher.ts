@@ -7,6 +7,7 @@
 
 import Enemy from "../OBJ/Enemy";
 import LiveObj from "../../__Lib/Base/LiveObj";
+import BaseObj from "../OBJ/BaseObj";
 
 
 const {ccclass, property} = cc._decorator;
@@ -23,6 +24,8 @@ const {ccclass, property} = cc._decorator;
         Count :number =1;
         @property
         Duration :number =0;
+        @property
+        PosNoise:number =0;
 
 
         Live():Hatcher
@@ -41,11 +44,11 @@ const {ccclass, property} = cc._decorator;
                 return
             };
             
-            let enm = cc.instantiate(this.Mod_Enemy)?.getComponent(Enemy);
+            let enm = cc.instantiate(this.Mod_Enemy)?.getComponent(BaseObj);
             if(enm != null)
             {                  
                 enm.node.parent = cc.director.getScene();
-                enm.node.setPosition( this.GetWorldPosition()   );   
+                enm.node.setPosition( this.GetWorldPosition().add(cc.v2((Math.random()-Math.random())*this.PosNoise))   );   
                 
                 if(this._ONHatch!=null) this._ONHatch(enm);
             }

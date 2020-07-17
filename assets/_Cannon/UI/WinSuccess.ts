@@ -18,6 +18,12 @@ export default class WinSuccess extends Win {
     @property(cc.Button)
     btRetry: cc.Button = null;
 
+    @property(cc.Label)
+    uiTime: cc.Label = null;
+    @property(cc.Label)
+    uiScore: cc.Label = null;
+    @property(cc.Label)
+    uiGold: cc.Label = null;
     @property
     text: string = 'hello';
 
@@ -30,6 +36,13 @@ export default class WinSuccess extends Win {
     Set(result:number):WinSuccess
     {
         this.__EndResult =result;
+        return this;
+    }
+    SetScore(score:number,time:number,gold:number):WinSuccess
+    {
+        if(this.uiTime!=null) this.uiTime.string = time.toFixed(0);
+        if(this.uiScore!=null) this.uiScore.string = score.toFixed(0);
+        if(this.uiGold!=null) this.uiGold.string = gold.toFixed(0);
         return this;
     }
     OnShow()

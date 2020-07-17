@@ -6,11 +6,13 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import ACC from "../ACC";
+import GM from "../GM";
+import UIOBJ from "../../__Lib/Base/UIOBJ";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class UIAccInfo extends UIOBJ {
 
     @property(cc.Label)
     uiGold: cc.Label = null;
@@ -22,7 +24,7 @@ export default class NewClass extends cc.Component {
 
     start () 
     {
-
+        GM.ACCLOOT = this;
     }
     _passed =0;
     update (dt) 

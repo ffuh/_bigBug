@@ -34,10 +34,10 @@ export default class WinLevel extends Win {
     }
 
 
-        start () 
-        {
-
-        }
+    start () 
+    {
+ 
+    }
 
     update (dt) 
     {

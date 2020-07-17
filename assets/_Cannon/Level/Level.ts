@@ -31,6 +31,9 @@ import WinSuccess from "../UI/WinSuccess";
         @property
         Life:number=180;
         @property
+        BaseScore:number=200;
+
+        @property
         WindForce:number =100;
         @property
         WindStable:number =100;
@@ -43,8 +46,22 @@ import WinSuccess from "../UI/WinSuccess";
 
         _Lifing=0;
         _Runing=false;
+        _Golding=0;
         _Enmes:Array<Enemy>;
         _Wind :LevelWind;
+
+
+        
+
+        // 关卡成绩  基础分（BaseScore）* 时间奖励银子  m= 8*d/(1+d)
+        ScoreOf()
+        {
+
+            var d=1-this.Progress();      
+            return d<0? this.BaseScore: this.BaseScore* (8*d/(1+d));
+         }
+
+
         start () 
         {
             GM.LEVEL = this;
@@ -58,7 +75,7 @@ import WinSuccess from "../UI/WinSuccess";
 
             GM.LEVEL=this;
         }
-        _OnAddObj(who:ClockObj)
+        _OnAddObj(who)
         {
             if(who==null)   return;
             
@@ -92,6 +109,8 @@ import WinSuccess from "../UI/WinSuccess";
 
         _DoBegin()
         {
+            //this._Golding = Math.ceil( 3+5*Math.random());
+
             this._Enmes=new Array<Enemy>();
             if( this._MY !=null)
             {
@@ -131,16 +150,19 @@ import WinSuccess from "../UI/WinSuccess";
         End(result)
         {
             this.EndResult =result;
+       
 
             this._Runing=false;
 
-            this._OnEnd?.call(this,result);
+
+
+            this._OnEnd?.call(this,this,result);
         }
 
 
 
         _OnEnd:Function;
-        WaitEnd(on:(result)=>void):Level
+        WaitEnd(on:(level:Level,result:number)=>void):Level
         {
             this._OnEnd =on;
             return this;
@@ -188,6 +210,11 @@ import WinSuccess from "../UI/WinSuccess";
 
                 return (_hatches==null || _hatches.length<  1) &&  this._Enmes.length<=0  ?2:0;
             }
+        }
+
+        AddLoot(item)
+        {
+            this._Golding++;
         }
     }
 

@@ -5,6 +5,8 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import Loot from "../../_Cannon/OBJ/Loot";
+
 const {ccclass, property} = cc._decorator;
 
 export enum  DeadActionOption
@@ -46,8 +48,11 @@ export default class OBJ extends cc.Component
 
     Dead():OBJ
     {
+
         if(this._ONDead!=null)
             this._ONDead(this);
+
+
 
         this.OnDead();
 
