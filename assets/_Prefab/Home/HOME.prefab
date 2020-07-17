@@ -163,7 +163,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "0ba97cce-5fd6-470e-aa0a-ea99a6f4ec75"
+      "__uuid__": "aa677664-2c94-43d2-8da1-259184bf720f"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -234,6 +234,7 @@
     "AutoLive": true,
     "Name": "Name",
     "Desc": "Desc",
+    "IsEnamy": false,
     "HP": 1,
     "Denf": 0,
     "Speed": 50,
