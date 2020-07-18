@@ -13,20 +13,20 @@ import INI from "../__Lib/INI/Ini";
 const {ccclass, property} = cc._decorator;
 export class ACCSaving 
 {
-    Level=1;
-    Gold=0;
+    Level:number=1;
+    Gold:number=0;
     constructor(_ini:string)
     {
         this.FromIni(  _ini);
     }
 
 
-    SetLevel(level):ACCSaving
+    SetLevel(level:number):ACCSaving
     {
-        this.Level=level;
+        this.Level= level;
         return this;
     }
-    SetGold(gold):ACCSaving
+    SetGold(gold:number):ACCSaving
     {
         this.Gold=gold;
         return this;
@@ -39,12 +39,12 @@ export class ACCSaving
         var data= INI.FromJsonString( json);
         try
         {
-            this.Level =data.level;
+            this.Level =Number.parseInt(data.level)  ;
         }catch{}
 
         try
         {
-            this.Gold =data.gold;
+            this.Gold =Number.parseInt(data.gold);
         }catch{}
     }
     ToIni():string
@@ -70,47 +70,40 @@ export default class ACC extends cc.Component {
 
     static SAVING:ACCSaving;
 
-    static LOADOK:boolean;
-
+    static LOADOK:boolean=false;
+    static _Instance;
     onLoad()
     {
+        ACC._Instance=this;
         cc.game.addPersistRootNode(this.node);
-        ACC.LOADOK=false;
     }
 
     start()
     {
-        
-        this._ReadRecordFromWeb("saving",()=>
+        this.schedule(this._Check,0.2);
+    }
+    _Init()
+    {
+        this._ReadFromWeb(()=>
         {
             ACC.LOADOK=true;
         });
-
-
-
-        //this.SAVING =new ACCSaving ("level=1,gold=2");
-
-        //this.SAVING.SetGold(10);
-
-        //this._SaveRecordToWeb("saving",this.Saving.ToIni());
+    }
+    _Check()
+    {
+        if(this.ACCID==null || this.ACCID.length<1) return;
+        
+        this.unschedule(this._Check);
+        this._Init();
     }
 
     
 
-    GetSaving()
-    {
-
-    }
-    SetSaving( _saving:string)
-    {
-
-    }
-
-    _ReadRecordFromWeb(name,on:()=>void)
+    _ReadFromWeb(on:()=>void)
     {
         //Saving/Get_JS?_game=SpeedJumper&_name=Leveling&_acc=acc
         HTTP.Request(this.URL_Record_Get,this.node)
-            .SetForm(["_acc",this.ACCID,"_game",GM.GAMENAME,"_name",name]).Wait(( (sucess,r)=>
+            .SetForm(["_acc",this.ACCID,"_game",GM.GAMENAME,"_name","saving"]).Wait(( (sucess,r)=>
             {
                 var info= JSON.parse(r);
 
@@ -121,14 +114,30 @@ export default class ACC extends cc.Component {
             } ).bind(this));
             
     }
-    _SaveRecordToWeb(name,value)
+    _SaveToWeb(_saving)
     {
         //_game=Bigbug&_name=saving&_acc=acc&_saving=level1
         HTTP.Request(this.URL_Record_Set,this.node)
-            .SetForm(["_acc",this.ACCID,"_game",GM.GAMENAME,"_name",name,"_saving",value]).Wait(( (sucess,r)=>
+            .SetForm(["_acc",this.ACCID,"_game",GM.GAMENAME,"_name","saving","_saving",_saving]).Wait(( (sucess,r)=>
             {
 
             } ).bind(this));
+    }
+    _Dosave()
+    {
+        var _saving=ACC.SAVING.ToIni();
+        this._SaveToWeb(_saving);
+    }
+
+    TrySave()
+    {
+        this.unschedule(this._Dosave);
+        this.scheduleOnce(this._Dosave,0.2);
+    }
+
+    static  SAVE()
+    {
+        ACC._Instance?.TrySave();
     }
 
 }

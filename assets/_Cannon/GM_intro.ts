@@ -6,19 +6,16 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import ACC from "./ACC";
+import { EX } from "../__Lib/EX";
+import GMBase from "./GMBase";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class GM_intro extends cc.Component {
+export default class GM_intro extends GMBase {
 
-    @property(cc.Label)
-    label: cc.Label = null;
 
-    @property
-    text: string = 'hello';
 
-    // LIFE-CYCLE CALLBACKS:
 
     onLoad () 
     {
@@ -26,17 +23,20 @@ export default class GM_intro extends cc.Component {
     }
     GOGOGOG()
     {
-        cc.director.loadScene("sc_Level - 001");
+        this.GOLevelNow();
     }
     start () 
     {
-       this.scheduleOnce(this._Check,1);
+       this.schedule(this._Check,0.3);
     }
 
     _Check()
     {
-        if(!ACC.LOADOK)    return;
+        if(!ACC.LOADOK )    return;
 
+        this.unschedule(this._Check);
+
+        this.SetNowLevel(ACC.SAVING.Level)
         this.GOGOGOG();
     }
 }

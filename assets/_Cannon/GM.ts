@@ -16,11 +16,14 @@ import UILevelWind from "./Level/UILevelWind";
 import Home from "./OBJ/Home";
 import Win from "../__Lib/Base/Win";
 import Follow from "../__Lib/Base/Follow";
+import GMBase from "./GMBase";
+import LevelTest____ from "./Level/LevelTest____";
+import OBJ from "../__Lib/Base/OBJ";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class GM extends cc.Component 
+export default class GM extends GMBase 
 {
 
     @property(Follow)
@@ -56,6 +59,7 @@ export default class GM extends cc.Component
     static  WA_MAX =1000;
     static CONTROLTIME=15;
     static INCONTROLING=false;
+    static ACCLOOT:OBJ;
     
     static WA(stable:number,hy:number):cc.Vec2
     {
@@ -65,31 +69,25 @@ export default class GM extends cc.Component
     }
 
     // LIFE-CYCLE CALLBACKS:
+    _Win_Control :WinControl;
 
     onLoad () 
     {
         GM.G=-500;
-
         GM.CAMERA=this.MainCamera;
 
-        cc.director.getCollisionManager().enabled = true; //开启碰撞检测，默认为关闭
-        //cc.director.getCollisionManager().enabledDebugDraw = true; //开启碰撞检测范围的绘制
-        //cc.director.getCollisionManager().enabledDrawBoundingBox = true; //开启碰撞组件的包围盒绘制
+        this.node.addComponent(LevelTest____);
     }
-
-    start () 
-    {
-      
-        this.schedule(this._Init,0.3);
-    }
-    _Win_Control :WinControl;
-    _Init()
+    OnInit()
     {
         if(GM.LEVEL==null || GM.CANNON==null|| GM.HOME==null)   
         {
             return;
         }
-        this.unscheduleAllCallbacks();
+
+        super.OnInit();
+
+        this.SetNowLevel(GM.LEVEL.ID);
 
         UI.CreateWindow<WinLevel>(this.Mod_WinLevel);
         
@@ -98,14 +96,22 @@ export default class GM extends cc.Component
         this._Win_Control= UI.CreateWindow<WinControl>(this.Mod_WinControl)?.getComponent(WinControl);
         this._Win_Control?.Close();
 
-        
-        GM.LEVEL.Begin().WaitEnd(result=>
+        if(this.Mod_EFF_BGM!=null)
+        {
+            cc.instantiate(this.Mod_EFF_BGM).setParent(cc.director.getScene());
+        }
+    }
+    OnBegin()
+    {
+        GM.LEVEL.Begin().WaitEnd((level,result)=>
             {
-                this._DoSuccess(result);
+                if(!this.IsRuning()) return;
+                this.Success(result);
             });
 
         GM.CANNON.Begin().WaitShoot(oo=>
             {
+                if(!this.IsRuning()) return;
                if(oo!=null)
                {
                     GM.CAMERA?.Follow(oo);
@@ -113,26 +119,24 @@ export default class GM extends cc.Component
 
             }).WaitWaiting(w=>
             {
+                if(!this.IsRuning()) return;
                 this._DoEnemyTime();
 
             }).WaitWaitingOver(w=>
             {
+                if(!this.IsRuning()) return;
                 this._DoPlayTime();
             });    
         
         GM.HOME.WaitDead(w=>
             {
-                this._DoFaild();
-
+                if(!this.IsRuning()) return;
+                this.Failed();
             });
-
-        if(this.Mod_EFF_BGM!=null)
-        {
-            cc.instantiate(this.Mod_EFF_BGM).setParent(cc.director.getScene());
-        }
 
 
     }
+
     _DoPlayTime()
     {
         GM.INCONTROLING=true;
@@ -144,24 +148,38 @@ export default class GM extends cc.Component
         GM.INCONTROLING=false;
     }
 
-    _DoSuccess(f)
+    OnSuccess(f)
     {
+        super.OnSuccess(f);
+
+        var _golded = GM.LEVEL._Golding;
+        var _timed = GM.LEVEL._Lifing;
+        var _scored =GM.LEVEL.ScoreOf();
+
+        
+
+        
         if(this.Mod_WinSuccess!=null)
         {
             var win = UI.CreateWindow<WinSuccess>(this.Mod_WinSuccess);
             this.Mod_WinFaild=null;
             if(win!=null && win.getComponent(WinSuccess)!=null)
-                win.getComponent(WinSuccess)?.Set(f).WaitMsg((w,m)=>
+                win.getComponent(WinSuccess)?.Set(f).SetScore(_scored,_timed,_golded).WaitMsg((w,m)=>
                     {
-                        if(m=="OK")  this._DoNext();
+                        if(m=="OK")  
+                        {
+                            this._DoCommit(_golded,_timed,_scored);
+                            this.GoLevelNext();                           
+                        }
    
-                        if(m=="RETRY") this._DoReplay();
+                        if(m=="RETRY") this.GOLevelNow();
 
                     }).Show();
         }
     }
-    _DoFaild()
+    OnFailed()
     {
+        super.OnFailed();
         if(this.Mod_WinFaild!=null)
         {
             var win = UI.CreateWindow<Win>(this.Mod_WinFaild);
@@ -170,27 +188,10 @@ export default class GM extends cc.Component
                 win.getComponent(Win)?.WaitMsg((w,m)=>
                     {
      
-                        if(m=="RETRY") this._DoReplay();
+                        if(m=="RETRY") this.GOLevelNow();
 
                     }).Show();
         }
     }
-
-    _DoNext()
-    {
-        var name="sc_Level - "+ EX.PrefixInteger(GM.LEVEL.ID+1,3);
-
-        cc.director.loadScene(name);
-    }
-    _DoReplay()
-    {
-        var name="sc_Level - "+ EX.PrefixInteger(GM.LEVEL.ID,3);
-
-        cc.director.loadScene(name);
-    }
-
-
-
-
     // update (dt) {}
 }

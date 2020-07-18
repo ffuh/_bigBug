@@ -6,6 +6,8 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import LiveObj from "../../__Lib/Base/LiveObj";
+import Loot from "./Loot";
+import GM from "../GM";
 
 
 
@@ -124,6 +126,7 @@ export default class BaseObj extends LiveObj
         if(this.NowHP<=0)
         {
             this.NowHP=0;
+            this.OnKilled();
             this.Dead();
         }
 
@@ -144,6 +147,21 @@ export default class BaseObj extends LiveObj
         if(this.uiName!=null)
             this.uiName.string=this.Name;
     }
+
+    OnKilled()
+    {
+        var _loot=this.getComponents(Loot);
+        if(_loot!=null)
+        {
+            _loot.forEach(t => 
+            {
+                t.Drop();
+            });
+        }
+      
+    }
+
+
     update(dt)
     {
         super.update(dt);
