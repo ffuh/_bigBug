@@ -2905,7 +2905,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1375.898,
+        528,
         0,
         0,
         0,
@@ -2986,7 +2986,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1375.898,
+        528,
         0,
         0,
         0,
@@ -3021,7 +3021,7 @@
     "_enabled": true,
     "DeadAction": 1,
     "AutoLive": false,
-    "Delay": 50,
+    "Delay": 30,
     "Mod_Enemy": {
       "__uuid__": "2f2f0c7b-c1d8-4eaa-ae68-601affb11700"
     },
