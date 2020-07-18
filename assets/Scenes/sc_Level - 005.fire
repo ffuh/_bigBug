@@ -4776,7 +4776,10 @@
       "__uuid__": "36610e5b-e1c1-436b-9ea4-8f2dc4661925"
     },
     "Mod_WinControl": {
-      "__uuid__": "0a990151-e0a8-4b35-8a24-c45991ab05d7"
+      "__uuid__": "aad5b572-15c2-4a14-b4e3-408811d4f9ed"
+    },
+    "Mod_WinFire": {
+      "__uuid__": "eccd597c-c6f4-4f63-9b75-f73094dfa9a3"
     },
     "Mod_Wind": null,
     "Mod_WinSuccess": {

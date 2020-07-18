@@ -50,7 +50,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 150,
-      "height": 15
+      "height": 10
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -61,8 +61,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -484.927,
-        576.392,
+        0,
+        294.754,
         0,
         0,
         0,
@@ -117,7 +117,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 150,
-      "height": 15
+      "height": 10
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -253,8 +253,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 30,
-      "height": 30
+      "width": 15,
+      "height": 15
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -265,8 +265,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -92.455,
-        0.925,
+        -87.55,
+        -2.403,
         0,
         0,
         0,
@@ -404,7 +404,7 @@
     "_alignFlags": 1,
     "_left": 0,
     "_right": 0,
-    "_top": 16.108000000000004,
+    "_top": 0.2459999999999809,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
