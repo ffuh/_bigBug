@@ -55,7 +55,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1200,
+        2000,
         0,
         0,
         0,
@@ -621,9 +621,7 @@
       "__id__": 14
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "426de0ee-62d7-4051-8364-d954d765cd25"
-    },
+    "_clip": null,
     "_volume": 1,
     "_mute": false,
     "_loop": false,

@@ -39,6 +39,9 @@ export default class Loot extends cc.Component {
         if( Math.random()*100 <100-this.RandomFactor)
             return;
 
+
+        GM.LEVEL.AddLoot(this.Count);
+
         LootDroper.ADD(GM.ACCLOOT.node).Set(this.MOD,this.Count).SetPos(this._Owner.GetWorldPosition(),GM.ACCLOOT.GetWorldPosition());
     }
 

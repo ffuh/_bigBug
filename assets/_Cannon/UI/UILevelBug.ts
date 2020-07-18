@@ -6,32 +6,17 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import GM from "../GM";
+import UIAdmin from "../../__Lib/Base/UIAdmin";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class UILevelBug extends cc.Component {
+export default class UILevelBug extends UIAdmin {
 
     // LIFE-CYCLE CALLBACKS:
-    onLoad () 
+    OnAdmin()
     {
-         this.node.on(cc.Node.EventType.TOUCH_END,this.OnDown,this);
-
-    }
-    NNN=0;
-    OnDown()
-    {
-        if(this.NNN++>5)
-        {
-            GM._Instance.GoLevelLast();
-            this.NNN=0;
-        }
-        this.unscheduleAllCallbacks();
-        this.scheduleOnce(this._Clear,0.5);
-    }
-    _Clear()
-    {
-        this.NNN=0;
+        GM._Instance.GoLevelLast();
     }
 
 }

@@ -60,13 +60,12 @@ export default class LootDroper extends cc.Component {
         one.setParent(cc.director.getScene());
         one.position =cc.v3( this._From);
 
-        var bezier = [cc.v2(0, 300*(0.5-Math.random())), cc.v2(300-500*Math.random(), -300), cc.v2(0, 360)];
+        var bezier = [cc.v2(0, 300*(0.5-Math.random())), cc.v2(300-500*Math.random(), -300), cc.v2(0, 560)];
         var bezierForward = cc.bezierBy(2, bezier);
 
        
         one.runAction(bezierForward);
 
-        GM.LEVEL.AddLoot(one);
     }
     _End()
     {

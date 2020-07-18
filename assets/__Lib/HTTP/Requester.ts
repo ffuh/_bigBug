@@ -35,8 +35,13 @@ export default class Requester extends cc.Component {
         {
             if(this._FormData!=null && this._FormData.length>1)
                 this._FormData+="&";
-            
-            this._FormData+=pamrams[i*2]+"="+pamrams[i*2+1];
+            if(pamrams[i*2]!=null && pamrams[i*2].length>0)
+            {
+                if(pamrams[i*2+1]==null)
+                    pamrams[i*2+1]="";
+                this._FormData+=pamrams[i*2]+"="+pamrams[i*2+1];
+            }
+
         }
 
         return this;

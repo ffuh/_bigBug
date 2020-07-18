@@ -16,6 +16,7 @@ import { EX } from "../../__Lib/EX";
 import UIOBJ from "../../__Lib/Base/UIOBJ";
 import UI from "../../__Lib/Base/UI";
 import WinSuccess from "../UI/WinSuccess";
+import SYS from "../../__Lib/SYS";
 
 
 
@@ -154,11 +155,16 @@ import WinSuccess from "../UI/WinSuccess";
 
             this._Runing=false;
 
+            SYS.PLAYSuccess();
 
-
-            this._OnEnd?.call(this,this,result);
+            this.scheduleOnce(this._DoEndCallBack,0.5);
         }
 
+        _DoEndCallBack()
+        {
+            this._OnEnd?.call(this,this,this.EndResult);
+        }
+            
 
 
         _OnEnd:Function;
@@ -212,9 +218,9 @@ import WinSuccess from "../UI/WinSuccess";
             }
         }
 
-        AddLoot(item)
+        AddLoot(count)
         {
-            this._Golding++;
+            this._Golding+=count;
         }
     }
 

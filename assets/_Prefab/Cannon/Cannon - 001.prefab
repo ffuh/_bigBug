@@ -169,7 +169,7 @@
       "__uuid__": "cad3f6eb-b81f-4d2f-b58f-0de5ba934e46"
     },
     "ICON": {
-      "__uuid__": "05c44349-b22a-4385-86f3-ebeaa9228c93"
+      "__uuid__": "80cc70c8-97b7-4f2f-bea9-58350fb6db16"
     },
     "CD": 5,
     "_id": ""
@@ -262,7 +262,7 @@
       "__uuid__": "d90d42fd-84df-434a-81b1-193075faf2e6"
     },
     "ICON": {
-      "__uuid__": "5db60386-f228-498f-893a-51823631d745"
+      "__uuid__": "8a182967-c604-4990-ba97-a0c46b9557c8"
     },
     "CD": 10,
     "_id": ""
@@ -511,7 +511,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "Body<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 13
@@ -700,7 +700,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "New Sprite<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 18
@@ -871,7 +871,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "New Sprite<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 22

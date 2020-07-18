@@ -8,19 +8,30 @@
 import ACC from "../ACC";
 import GM from "../GM";
 import UIOBJ from "../../__Lib/Base/UIOBJ";
+import UIAdmin from "../../__Lib/Base/UIAdmin";
+import SYS from "../../__Lib/SYS";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class UIAccInfo extends UIOBJ {
+export default class UIAccInfo extends UIAdmin 
+{
 
     @property(cc.Label)
     uiGold: cc.Label = null;
 
-    @property
-    text: string = 'hello';
+    @property(cc.Label)
+    uiAccid: cc.Label = null;
 
-
+    OnAdmin()
+    {
+        if(this.uiAccid!=null)
+        {
+            this.uiAccid.string=ACC.ACCID;
+            this.uiAccid.node.active=true;
+        }
+            
+    }
 
     start () 
     {
