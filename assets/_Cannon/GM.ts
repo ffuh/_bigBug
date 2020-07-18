@@ -19,6 +19,7 @@ import Follow from "../__Lib/Base/Follow";
 import GMBase from "./GMBase";
 import LevelTest____ from "./Level/LevelTest____";
 import OBJ from "../__Lib/Base/OBJ";
+import WinFire from "./UI/WinFire";
 
 const {ccclass, property} = cc._decorator;
 
@@ -37,6 +38,9 @@ export default class GM extends GMBase
     
     @property (cc.Prefab)
     Mod_WinControl:WinControl=null;
+
+    @property (cc.Prefab)
+    Mod_WinFire:WinFire=null;
 
     @property (cc.Prefab)
     Mod_Wind:UILevelWind=null;
@@ -69,7 +73,7 @@ export default class GM extends GMBase
     }
 
     // LIFE-CYCLE CALLBACKS:
-    _Win_Control :WinControl;
+    _Win_Fire :WinFire;
 
     onLoad () 
     {
@@ -92,9 +96,10 @@ export default class GM extends GMBase
         UI.CreateWindow<WinLevel>(this.Mod_WinLevel);
         
         UI.CreateWindow<UILevelWind>(this.Mod_Wind);
+        UI.CreateWindow<WinControl>(this.Mod_WinControl);
 
-        this._Win_Control= UI.CreateWindow<WinControl>(this.Mod_WinControl)?.getComponent(WinControl);
-        this._Win_Control?.Close();
+        this._Win_Fire= UI.CreateWindow<WinFire>(this.Mod_WinFire)?.getComponent(WinFire);
+        this._Win_Fire?.Close();
 
         if(this.Mod_EFF_BGM!=null)
         {
@@ -111,11 +116,12 @@ export default class GM extends GMBase
 
         GM.CANNON.Begin().WaitShoot(oo=>
             {
-                if(!this.IsRuning()) return;
+              if(!this.IsRuning()) return;
                if(oo!=null)
                {
                     GM.CAMERA?.Follow(oo);
                }     
+               this._Win_Fire?.Close();
 
             }).WaitWaiting(w=>
             {
@@ -140,7 +146,7 @@ export default class GM extends GMBase
     _DoPlayTime()
     {
         GM.INCONTROLING=true;
-        this._Win_Control.Show();
+        this._Win_Fire.Show();
         GM.CAMERA?.PosTo(GM.CANNON.GetWorldPosition().add(cc.v2(0,-500)));
     }
     _DoEnemyTime()

@@ -46,15 +46,18 @@ export default class WinControl extends Win {
     onLoad () 
     {
         super.onLoad();
-        this.node.on(cc.Node.EventType.TOUCH_END,this.__DoShoot,this);
+        //this.node.on(cc.Node.EventType.TOUCH_END,this.__DoShoot,this);
     }
     __DoShoot()
     {
-        this.Shoot();
+        //9[this.Shoot();
     }
     __NOW:UIShooter ;
     start ()
     {
+        if(this.WaitAddSA!=null)this.WaitAddSA.node.scale=0;
+        
+
         this.uiShooters=this.getComponentsInChildren(UIShooter);
         if(this.uiShooters!=null && GM.CANNON!=null)
         {
@@ -70,7 +73,7 @@ export default class WinControl extends Win {
                             if(this.WaitAddSA!=null)
                             {
                                 this.WaitAddSA.node.setScale(0,0,0);
-                                this.WaitAddSA.node.runAction(cc.scaleTo(0.2,1,1).easing(cc.easeSineIn()));
+                                this.WaitAddSA.node.runAction(cc.scaleTo(0.2,.5,.5).easing(cc.easeSineIn()));
                                 this.WaitAddSA.string="加等待"+w.Shooter.CD+"秒";
                             }
                                 
@@ -98,33 +101,33 @@ export default class WinControl extends Win {
     update (dt) 
     {
 
-        if(!this.IsShowing)return;
+        //if(!this.IsShowing)return;
 
-        this.__Couting-=dt;
+        // this.__Couting-=dt;
 
-        if(this.__Couting<=0)
-        {
-            this.Shoot();
-            return;
-        }
-        if(this.Couting!=null)
-        {         
-            var ttt= this.__Couting.toFixed(0);
-            if(ttt!=this.Couting.string && this.EFF_Counting!=null)
-            {
-                this.EFF_Counting.active=this.__Couting<5;
-                var fss = this.__Couting<5?1:0.6;
-                this.Couting.node.setScale(0,0,0);           
-                this.Couting.node.runAction(cc.scaleTo(0.2,fss,fss).easing(cc.easeSineIn()));
+        // if(this.__Couting<=0)
+        // {
+        //     this.Shoot();
+        //     return;
+        // }
+        // if(this.Couting!=null)
+        // {         
+        //     var ttt= this.__Couting.toFixed(0);
+        //     if(ttt!=this.Couting.string && this.EFF_Counting!=null)
+        //     {
+        //         this.EFF_Counting.active=this.__Couting<5;
+        //         var fss = this.__Couting<5?1:0.6;
+        //         this.Couting.node.setScale(0,0,0);           
+        //         this.Couting.node.runAction(cc.scaleTo(0.2,fss,fss).easing(cc.easeSineIn()));
     
-                this.Couting.node.color = this.__Couting<5?cc.Color.RED:cc.Color.WHITE;
+        //         this.Couting.node.color = this.__Couting<5?cc.Color.RED:cc.Color.WHITE;
 
-                this.Couting.string= ttt;
-            }
+        //         this.Couting.string= ttt;
+        //     }
           
 
 
-        }
+        // }
 
 
         if(this.Yaw!=null && GM.CANNON!=null)

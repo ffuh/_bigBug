@@ -5,29 +5,18 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import Requester from "./Requester";
+import Win from "../../__Lib/Base/Win";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class HTTP extends cc.Component {
+export default class WinFire extends Win {
 
-    static TIMEOUT=15000;
-    static DOMAIN:string="https://game.ice909.com/";
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
 
-    start ()
-    {
 
-    }
-    static  Request(url:string,node:cc.Node):Requester
-    {
-        if(node==null)  return null;
-
-        return node.addComponent(Requester).Set(url);
-    }
     // update (dt) {}
 }
