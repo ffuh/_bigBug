@@ -74,9 +74,10 @@ export default class GM extends GMBase
 
     // LIFE-CYCLE CALLBACKS:
     _Win_Fire :WinFire;
-
+    static  _Instance:GM;
     onLoad () 
     {
+        GM._Instance=this;
         GM.G=-500;
         GM.CAMERA=this.MainCamera;
 

@@ -177,7 +177,7 @@
       "array": [
         0,
         0,
-        573.458775518497,
+        575.2140837652233,
         0,
         0,
         0,
@@ -460,7 +460,8 @@
       "__id__": 10
     },
     "_enabled": true,
-    "ACCID": "acc1001",
+    "ACCID": "acc100",
+    "ForRandomDebug": true,
     "URL_Record_Get": "Saving/Get_JS",
     "URL_Record_Set": "Saving/Up",
     "_id": "66nhHDXIBJ0rrJb03v1AZu"

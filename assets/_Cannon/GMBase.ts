@@ -106,7 +106,12 @@ export default class GMBase extends cc.Component {
     {
         this.NowLevel=Number.parseInt(levelid);
     }
+    GoLevelLast()
+    {
+        var name="sc_Level - "+ EX.PrefixInteger(this.NowLevel-1,3);
 
+        cc.director.loadScene(name);
+    }
     GoLevelNext()
     {
         var name="sc_Level - "+ EX.PrefixInteger(this.NowLevel+1,3);

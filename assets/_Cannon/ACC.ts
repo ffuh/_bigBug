@@ -62,6 +62,8 @@ export default class ACC extends cc.Component {
 
     @property
     ACCID:string="acc";
+    @property
+    ForRandomDebug=false;
 
     @property 
     URL_Record_Get:string="Saving/Get_JS";
@@ -76,6 +78,8 @@ export default class ACC extends cc.Component {
     {
         ACC._Instance=this;
         cc.game.addPersistRootNode(this.node);
+        if(this.ForRandomDebug)
+            this.ACCID="acc"+(100*Math.random()).toFixed(0);
     }
 
     start()
