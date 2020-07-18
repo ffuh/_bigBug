@@ -48,7 +48,7 @@ const {ccclass, property} = cc._decorator;
             if(enm != null)
             {                  
                 enm.node.parent = cc.director.getScene();
-                enm.node.setPosition( this.GetWorldPosition().add(cc.v2((Math.random()-Math.random())*this.PosNoise))   );   
+                enm.node.setPosition( this.GetWorldPosition());//.add(cc.v2((Math.random()-Math.random())*this.PosNoise))   );   
                 
                 if(this._ONHatch!=null) this._ONHatch(enm);
             }

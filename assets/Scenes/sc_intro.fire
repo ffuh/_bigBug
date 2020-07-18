@@ -177,7 +177,7 @@
       "array": [
         0,
         0,
-        760.3703045227372,
+        573.0490202557622,
         0,
         0,
         0,
@@ -261,8 +261,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 586.29,
-      "height": 151.2
+      "width": 168.89,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -314,15 +314,13 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "l   讨厌蟑螂",
-    "_N$string": "l   讨厌蟑螂",
-    "_fontSize": 120,
-    "_lineHeight": 120,
+    "_string": "l讨厌蟑螂",
+    "_N$string": "l讨厌蟑螂",
+    "_fontSize": 40,
+    "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "faebddbb-330b-4cce-80e7-223e312fc8cc"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
     "_styleFlags": 0,
@@ -391,7 +389,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "**SYS_ACC",
+    "_name": "**ACC",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -401,9 +399,6 @@
     "_components": [
       {
         "__id__": 11
-      },
-      {
-        "__id__": 12
       }
     ],
     "_prefab": null,
@@ -466,15 +461,5 @@
     "URL_Record_Get": "Saving/Get_JS",
     "URL_Record_Set": "Saving/Up",
     "_id": "66nhHDXIBJ0rrJb03v1AZu"
-  },
-  {
-    "__type__": "96bbcBTN1RD44knpIfNQoYk",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 10
-    },
-    "_enabled": true,
-    "_id": "38GfBL/whN5KwEyEMOeoag"
   }
 ]
