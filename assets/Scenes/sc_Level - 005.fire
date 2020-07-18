@@ -204,7 +204,7 @@
       "array": [
         0,
         -172.00000000000003,
-        409.6300159900395,
+        539.5338265577053,
         0,
         0,
         0,
@@ -2988,7 +2988,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        528,
+        643.742,
         0,
         0,
         0,
@@ -3148,7 +3148,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        550,
+        871.508,
         0,
         0,
         0,
@@ -3784,8 +3784,8 @@
     "_enabled": true,
     "ID": 5,
     "Life": 50,
-    "WindForce": 30,
-    "WindStable": 100,
+    "WindForce": 0,
+    "WindStable": 0,
     "_id": "207/SnzhtH2JI+28S+6ZG6"
   },
   {
@@ -3922,7 +3922,7 @@
       "array": [
         0,
         0,
-        409.6300159900395,
+        539.5338265577053,
         0,
         0,
         0,
@@ -4088,7 +4088,7 @@
         "__id__": 124
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 127
