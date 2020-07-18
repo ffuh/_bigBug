@@ -42,14 +42,15 @@ export default class LootDroper extends cc.Component {
 
         this._Passed+=dt;
         if(this._Passed<0.2)    return;
-        
-        this._DropOne();   
+          
         this._Counted++;
         this._Passed=0;
         if(this._Counted>this._Count)
         {          
             this._End();return;
         }
+        
+        this._DropOne(); 
  
         
     }
